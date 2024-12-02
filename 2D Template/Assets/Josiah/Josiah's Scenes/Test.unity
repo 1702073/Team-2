@@ -391,6 +391,8 @@ MonoBehaviour:
   AttackLayer:
     serializedVersion: 2
     m_Bits: 8
+  cooldown: 10
+  attackReady: 1
 --- !u!1 &1753701771
 GameObject:
   m_ObjectHideFlags: 0
