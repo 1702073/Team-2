@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     public float moveSpeed = 5f;
 
     public Rigidbody2D rb2d;
+    public Animator animator;
 
     Vector2 movement;
     
@@ -16,14 +17,15 @@ public class Player_Movement : MonoBehaviour
         //Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+        
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
+        animator.SetFloat("Speed", movement.sqrMagnitude);
     }
 
     void FixedUpdate()
-    {
-        //Movment
+    {        
         rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.fixedDeltaTime);
-
-
     }
 
 }
