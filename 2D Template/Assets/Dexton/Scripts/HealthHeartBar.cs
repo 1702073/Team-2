@@ -7,6 +7,7 @@ public class HealthHeartBar : MonoBehaviour
 {
     public GameObject heartPrefab;
     public PlayerStats playerHealth;
+    public PlayerStats playerMaxHealth;
     List<HealthHeart> hearts = new List<HealthHeart>();
 
     public void DrawHearts()
@@ -15,7 +16,8 @@ public class HealthHeartBar : MonoBehaviour
 
         //Determine how many hearts to make total
         //Based on max health
-        float maxHealthRemainder = playerHealth.playerHealth;
+        float maxHealthRemainder = playerHealth.playerMaxHealth %2;
+        //int heartsToMake = ((int)(playerHealth.playerMaxHealth / 2) + maxHealthRemainder);
     }
 
     public void CreateEmptyHearts()
