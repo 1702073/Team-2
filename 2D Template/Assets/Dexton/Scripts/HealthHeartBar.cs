@@ -6,8 +6,7 @@ using UnityEngine.Rendering;
 public class HealthHeartBar : MonoBehaviour
 {
     public GameObject heartPrefab;
-    public float health, maxHealth;
-    public PlayerHealth playerHealth;
+    public PlayerStats playerHealth;
     List<HealthHeart> hearts = new List<HealthHeart>();
 
     public void DrawHearts()
@@ -16,7 +15,7 @@ public class HealthHeartBar : MonoBehaviour
 
         //Determine how many hearts to make total
         //Based on max health
-        float maxHealthRemainder = playerHealth.maxHealth;
+        float maxHealthRemainder = playerHealth.PlayerHealth;
     }
 
     public void CreateEmptyHearts()
