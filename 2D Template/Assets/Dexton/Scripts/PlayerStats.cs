@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float PlayerHealth = 6;
+    public float playerHealth = 6;
+    public float playerMaxHealth = 6;
 }
