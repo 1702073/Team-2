@@ -6,8 +6,8 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public PlayerStats playerHealth;
-    public static int enemyHealth;
+    //public PlayerStats playerHealth;
+    public int enemyHealth;
 
     public LayerMask AttackLayer;
 

@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 1157042757}
   - component: {fileID: 1157042756}
   - component: {fileID: 1157042755}
-  - component: {fileID: 1157042754}
+  - component: {fileID: 1157042762}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -248,28 +248,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1157042754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1157042753}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a8838deac19bb4685273963ce29702, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 5
-  numOfHearts: 5
-  hearts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  fullHeart: {fileID: 21300000, guid: 36a3bdf9a35658840aa1d8a9479f3e9d, type: 3}
-  emptyHeart: {fileID: 21300000, guid: 1bdf65fa0be67264ea71963eb1b043db, type: 3}
 --- !u!114 &1157042755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -433,6 +411,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157042762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157042753}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52d6f72f9d9be764e8f1a1a77f7d1712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 6
+  playerMaxHealth: 6
 --- !u!1 &1226104019
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abea4f3a5e7cb3b41ae920a3372bbed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  enemyHealth: 3
   AttackLayer:
     serializedVersion: 2
     m_Bits: 8
