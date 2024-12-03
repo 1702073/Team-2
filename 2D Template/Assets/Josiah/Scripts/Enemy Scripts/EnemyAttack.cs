@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour
 {
-    public int health;
+    public PlayerStats playerHealth;
+    public static int enemyHealth;
 
     public LayerMask AttackLayer;
 
@@ -32,7 +33,7 @@ public class EnemyAttack : MonoBehaviour
         if (hit.collider.CompareTag("Player"))
         {
             // Attacks the player
-            hit.collider.GetComponent<PlayerTest>().health -= 1;
+            hit.collider.GetComponent<PlayerStats>().playerHealth -= 1;
         }
         
         attackReady = false;
@@ -47,6 +48,13 @@ public class EnemyAttack : MonoBehaviour
         attackReady = true;
     }
 
-    // if (health == 0, gameobject.destroy)
+    public void Death()
+    {
+        if (enemyHealth == 0)
+        {
+            Destroy(gameObject);
+            
+        }
+    }
 
 }
