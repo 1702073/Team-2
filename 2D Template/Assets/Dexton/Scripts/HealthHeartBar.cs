@@ -15,7 +15,7 @@ public class HealthHeartBar : MonoBehaviour
 
         //Determine how many hearts to make total
         //Based on max health
-        float maxHealthRemainder = playerHealth.PlayerHealth;
+        float maxHealthRemainder = playerHealth.playerHealth;
     }
 
     public void CreateEmptyHearts()
