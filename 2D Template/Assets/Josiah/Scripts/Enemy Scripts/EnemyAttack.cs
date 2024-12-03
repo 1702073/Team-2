@@ -46,4 +46,7 @@ public class EnemyAttack : MonoBehaviour
     {
         attackReady = true;
     }
+
+    // if (health == 0, gameobject.destroy)
+
 }
