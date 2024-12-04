@@ -14,6 +14,8 @@ public class EnemyAttack : MonoBehaviour
     public float cooldown;
     public bool attackReady = true;
 
+    public int enemyScore;
+
     private void Update()
     {
         // If the distance between the enemy and the player is less than or equal to one, then it will attack
@@ -22,6 +24,10 @@ public class EnemyAttack : MonoBehaviour
             Attack();
         }
 
+        if (enemyHealth <= 0)
+        {
+            Death();
+        }
     }
 
     public void Attack()
@@ -48,13 +54,16 @@ public class EnemyAttack : MonoBehaviour
         attackReady = true;
     }
 
-    public void Death()
+    public void TakeDamage( int damage)
     {
-        if (enemyHealth == 0)
-        {
+        enemyHealth -= damage;
+
+    }
+
+    void Death()
+    {
+            Score.scoreValue += enemyScore;
             Destroy(gameObject);
-            
-        }
     }
 
 }

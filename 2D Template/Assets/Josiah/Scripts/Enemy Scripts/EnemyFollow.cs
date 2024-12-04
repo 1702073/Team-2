@@ -7,6 +7,9 @@ public class EnemyFollow : MonoBehaviour
 
     public float speed;
     public float stoppingDistance;
+    public Animator enemyAnimator;
+
+    Vector2 movement;
 
     private Transform target;
 
@@ -22,6 +25,12 @@ public class EnemyFollow : MonoBehaviour
         {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
+
+        movement = target.position - transform.position;
+
+        enemyAnimator.SetFloat("Horizontal", movement.x);
+        enemyAnimator.SetFloat("Vertical", movement.y);
+        enemyAnimator.SetFloat("Speed", movement.sqrMagnitude);
 
     }
 
