@@ -13,7 +13,6 @@ public class HealthHeart : MonoBehaviour
         heartImage = GetComponent<Image>();
     }
 
-
     public void SetHeartImage(HeartStatus status)
     {
         switch (status)

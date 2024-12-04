@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,9 +7,28 @@ using UnityEngine.Rendering;
 public class HealthHeartBar : MonoBehaviour
 {
     public GameObject heartPrefab;
-    public PlayerStats playerHealth;
-    public PlayerStats playerMaxHealth;
+
+    public event Action OnPlayerDamaged;
+    public event Action OnPlayerDeath;
+
+    public float playerHealth = 5;
+    public float playerMaxHealth = 6;
     List<HealthHeart> hearts = new List<HealthHeart>();
+
+    private void OnEnable()
+    {
+        OnPlayerDamaged += DrawHearts;
+    }
+    private void OnDisable()
+    {
+        OnPlayerDamaged -= DrawHearts;
+    }
+
+
+    private void Start()
+    {
+       DrawHearts ();
+    }
 
     public void DrawHearts()
     {
@@ -16,8 +36,19 @@ public class HealthHeartBar : MonoBehaviour
 
         //Determine how many hearts to make total
         //Based on max health
-        float maxHealthRemainder = playerHealth.playerMaxHealth %2;
-        //int heartsToMake = ((int)(playerHealth.playerMaxHealth / 2) + maxHealthRemainder);
+        float maxHealthRemainder = playerMaxHealth %2; // 5/2=3 remainder1
+        int heartsToMake = (int)((playerMaxHealth / 2) + maxHealthRemainder);
+        //make 5 hearts (2)(2)(1)
+        for(int i = 0; i < heartsToMake; i++)
+        {
+            CreateEmptyHearts();
+        }
+
+        for(int i = 0; i < hearts.Count; i++)
+        {
+            int heartStatusRemainder = (int)Mathf.Clamp(playerHealth - (i * 2), 0, 2);
+            hearts[i].SetHeartImage((HeartStatus)(heartStatusRemainder));
+        }
     }
 
     public void CreateEmptyHearts()
@@ -37,5 +68,18 @@ public class HealthHeartBar : MonoBehaviour
             Destroy(t.gameObject);
         }
         hearts = new List<HealthHeart> ();
+    }
+
+    public void TakeDamage(float amount)
+    {
+        playerHealth -= amount;
+        OnPlayerDamaged?.Invoke();
+
+        if (playerHealth <= 0)
+        {
+            playerHealth = 0;
+            Debug.Log("You're Dead");
+            OnPlayerDeath?.Invoke();
+        }
     }
 }
