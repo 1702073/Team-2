@@ -218,7 +218,7 @@ RectTransform:
   m_Children:
   - {fileID: 2143057834}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0.32140875, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -409,7 +409,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1157042762
 MonoBehaviour:
@@ -608,7 +608,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1847761591
 GameObject:
@@ -623,6 +623,7 @@ GameObject:
   - component: {fileID: 1847761592}
   - component: {fileID: 1847761596}
   - component: {fileID: 1847761595}
+  - component: {fileID: 1847761597}
   m_Layer: 0
   m_Name: Enemy (test)
   m_TagString: Untagged
@@ -709,13 +710,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847761591}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.1672, y: -0.3276, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.1672003, y: -0.3276, z: 0}
   m_LocalScale: {x: 0.3824502, y: 0.3824502, z: 0.3824502}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1847761595
 MonoBehaviour:
@@ -731,7 +732,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   stoppingDistance: 0
-  enemyAnimator: {fileID: 0}
+  enemyAnimator: {fileID: 1847761592}
 --- !u!114 &1847761596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,13 +745,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abea4f3a5e7cb3b41ae920a3372bbed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyHealth: 10
+  enemyHealth: 0
   AttackLayer:
     serializedVersion: 2
-    m_Bits: 0
-  cooldown: 10000
+    m_Bits: 8
+  cooldown: 10
   attackReady: 1
   enemyScore: 0
+--- !u!114 &1847761597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847761591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33ad68b58ca24e64686f2a4581a34ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  droppedItemPrefab: {fileID: 4995900641122123472, guid: cf4fcc6c7e32290418e962664ca2fe0d, type: 3}
+  lootList:
+  - {fileID: 11400000, guid: 1689b29cb8353d245b9907e55c005dc6, type: 2}
+  - {fileID: 11400000, guid: 323773b6bfbf417448abdac0bd430398, type: 2}
+  - {fileID: 11400000, guid: 73496e52d645e0947b9723e85030ab66, type: 2}
+  - {fileID: 11400000, guid: db63a83318d73dd47b4dcd13814f1bd1, type: 2}
 --- !u!1 &2143057833
 GameObject:
   m_ObjectHideFlags: 0

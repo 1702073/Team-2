@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyGeneral : MonoBehaviour
 {
     //public PlayerStats playerHealth;
     public int enemyHealth;
@@ -62,8 +62,9 @@ public class EnemyAttack : MonoBehaviour
 
     void Death()
     {
-            Score.scoreValue += enemyScore;
-            Destroy(gameObject);
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
+        Score.scoreValue += enemyScore;
+        Destroy(gameObject);
     }
 
 }
