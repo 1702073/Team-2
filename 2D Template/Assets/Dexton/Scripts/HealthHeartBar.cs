@@ -10,6 +10,9 @@ public class HealthHeartBar : MonoBehaviour
 
     public event Action OnPlayerDamaged;
     public event Action OnPlayerDeath;
+    public event Action OnPlayerHeal;
+
+    public KeyCode healthUp;
 
     public float playerHealth = 5;
     public float playerMaxHealth = 6;
@@ -18,10 +21,13 @@ public class HealthHeartBar : MonoBehaviour
     private void OnEnable()
     {
         OnPlayerDamaged += DrawHearts;
+        OnPlayerHeal += DrawHearts;
+
     }
     private void OnDisable()
     {
         OnPlayerDamaged -= DrawHearts;
+        OnPlayerHeal += DrawHearts;
     }
 
 
@@ -29,6 +35,28 @@ public class HealthHeartBar : MonoBehaviour
     {
        DrawHearts ();
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(healthUp))
+        {
+            playerHealth++;
+            OnPlayerHeal?.Invoke();
+        }
+
+        if (playerHealth > playerMaxHealth)
+        {
+            playerHealth = playerMaxHealth;
+        }
+
+        if (playerHealth <= 0)
+        {
+            playerHealth = 0;
+            Debug.Log("You're Dead");
+            OnPlayerDeath?.Invoke();
+        }
+    }
+
 
     public void DrawHearts()
     {
@@ -73,13 +101,6 @@ public class HealthHeartBar : MonoBehaviour
     public void TakeDamage(float amount)
     {
         playerHealth -= amount;
-        OnPlayerDamaged?.Invoke();
-
-        if (playerHealth <= 0)
-        {
-            playerHealth = 0;
-            Debug.Log("You're Dead");
-            OnPlayerDeath?.Invoke();
-        }
+        OnPlayerDamaged?.Invoke();        
     }
 }
