@@ -36,7 +36,7 @@ public class EnemyGeneral : MonoBehaviour
         var hit = Physics2D.CircleCast(transform.position + Vector3.up, 1, Vector2.zero, 0, AttackLayer);
 
         // See if it hit the player
-        if (hit.collider.CompareTag("Player"))
+        if (hit&&hit.collider.CompareTag("Player"))
         {
             // Attacks the player
             hit.collider.GetComponent<PlayerStats>().playerHealth -= 1;

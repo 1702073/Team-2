@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 
 public class HealthHeartBar : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class HealthHeartBar : MonoBehaviour
 
     public KeyCode healthUp;
 
-    public float playerHealth = 5;
+    public float playerHealth = 6;
     public float playerMaxHealth = 6;
     List<HealthHeart> hearts = new List<HealthHeart>();
 
@@ -27,7 +28,7 @@ public class HealthHeartBar : MonoBehaviour
     private void OnDisable()
     {
         OnPlayerDamaged -= DrawHearts;
-        OnPlayerHeal += DrawHearts;
+        OnPlayerHeal -= DrawHearts;
     }
 
 
@@ -52,6 +53,7 @@ public class HealthHeartBar : MonoBehaviour
         if (playerHealth <= 0)
         {
             playerHealth = 0;
+            SceneManager.LoadScene("Title");
             Debug.Log("You're Dead");
             OnPlayerDeath?.Invoke();
         }
@@ -67,6 +69,7 @@ public class HealthHeartBar : MonoBehaviour
         float maxHealthRemainder = playerMaxHealth %2; // 5/2=3 remainder1
         int heartsToMake = (int)((playerMaxHealth / 2) + maxHealthRemainder);
         //make 5 hearts (2)(2)(1)
+
         for(int i = 0; i < heartsToMake; i++)
         {
             CreateEmptyHearts();
