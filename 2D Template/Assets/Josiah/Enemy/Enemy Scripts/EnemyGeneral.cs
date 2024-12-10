@@ -30,6 +30,11 @@ public class EnemyGeneral : MonoBehaviour
         }
     }
 
+    public void Spawn()
+    {
+        
+    }
+
     public void Attack()
     {
         // Spawn a circle hitbox and sees what it hit
@@ -47,7 +52,6 @@ public class EnemyGeneral : MonoBehaviour
         // Forces the enemy to wait before it can attack again
         Invoke(nameof(ResetAttack), cooldown);
     }
-
 
     private void ResetAttack()
     {
