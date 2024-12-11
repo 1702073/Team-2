@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class BattleSystem : MonoBehaviour
 {
+    [SerializeField] private Transform enemyTransform;
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         StartBattle();
     }
@@ -13,5 +14,6 @@ public class BattleSystem : MonoBehaviour
     private void StartBattle()
     {
         Debug.Log("StartBattle");
+        enemyTransform.GetComponent<EnemyGeneral>().Spawn();
     }
 }

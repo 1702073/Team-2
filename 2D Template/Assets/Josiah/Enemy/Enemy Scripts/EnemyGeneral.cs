@@ -3,11 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class EnemyGeneral : MonoBehaviour
 {
+    public GameObject enemyPrefab;
+
     //public PlayerStats playerHealth;
     public int enemyHealth;
+
+    public Vector2 enemyPosition;
 
     public LayerMask AttackLayer;
 
@@ -32,7 +37,7 @@ public class EnemyGeneral : MonoBehaviour
 
     public void Spawn()
     {
-        
+        transform.position = (enemyPosition);
     }
 
     public void Attack()
@@ -61,7 +66,6 @@ public class EnemyGeneral : MonoBehaviour
     public void TakeDamage( int damage)
     {
         enemyHealth -= damage;
-
     }
 
     void Death()
