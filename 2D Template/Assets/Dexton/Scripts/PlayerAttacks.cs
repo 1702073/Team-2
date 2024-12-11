@@ -10,10 +10,14 @@ public class PlayerAttacks : MonoBehaviour
     public float cooldown;
     public bool attackReady = true;
 
+    public float distance;
+    public float radius;
+
     private void Update()
     {
 
-        if (Input.GetMouseButtonDown(0))
+
+        if (Input.GetMouseButtonDown(0) && attackReady == true)
         {
             Attack();
         }
@@ -23,7 +27,7 @@ public class PlayerAttacks : MonoBehaviour
     public void Attack()
     {
         // Spawn a circle hitbox and sees what it hit
-        var hit = Physics2D.CircleCast(transform.position + Vector3.up, 1, Vector2.zero, 0, AttackLayer);
+        var hit = Physics2D.CircleCast(GetAttackSpot(), radius, Vector2.zero, 0, AttackLayer);
 
         // See if it hit the player
         if (hit&&hit.collider.CompareTag("Enemy"))
@@ -34,11 +38,32 @@ public class PlayerAttacks : MonoBehaviour
 
         attackReady = false;
         // Forces the enemy to wait before it can attack again
-        //Invoke(nameof(ResetAttack), cooldown);
+        Invoke(nameof(ResetAttack), cooldown);
     }
 
-    //private void ResetAttack()
-    //{
-    //    attackReady = true;
-    //}
+    private Vector2 GetAttackDirection()
+    {
+        Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        Vector2 direction = (mousePos - (Vector2)transform.position).normalized * distance;
+
+        return direction;
+    }
+
+    private Vector2 GetAttackSpot()
+    {
+        return transform.position + (Vector3)GetAttackDirection();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawLine(transform.position, transform.position + (Vector3)GetAttackDirection());
+        Gizmos.DrawWireSphere(GetAttackSpot(), radius);
+    }
+
+
+    private void ResetAttack()
+    {
+        attackReady = true;
+    }
 }
