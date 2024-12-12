@@ -13,24 +13,38 @@ public class EnemyFollow : MonoBehaviour
 
     private Transform target;
 
+    private EnemyGeneral enemyGeneral;
 
     private void Start()
     {
+        enemyGeneral = GetComponent<EnemyGeneral>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     private void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+        switch (enemyGeneral.state)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            case EnemyGeneral.State.Idle:
+
+                break;
+
+            case EnemyGeneral.State.Active:
+                if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
+                {
+                    transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                }
+
+                movement = target.position - transform.position;
+
+                enemyAnimator.SetFloat("Horizontal", movement.x);
+                enemyAnimator.SetFloat("Vertical", movement.y);
+                enemyAnimator.SetFloat("Speed", movement.sqrMagnitude);
+
+                break;
         }
 
-        movement = target.position - transform.position;
 
-        enemyAnimator.SetFloat("Horizontal", movement.x);
-        enemyAnimator.SetFloat("Vertical", movement.y);
-        enemyAnimator.SetFloat("Speed", movement.sqrMagnitude);
 
     }
 
