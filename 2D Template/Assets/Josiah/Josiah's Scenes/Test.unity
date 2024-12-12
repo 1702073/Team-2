@@ -225,37 +225,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1078490601
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1078490602}
-  m_Layer: 0
-  m_Name: Enemy Spawner
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1078490602
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1078490601}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1157042753
 GameObject:
   m_ObjectHideFlags: 0
@@ -550,7 +519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872335, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
       propertyPath: enemyHealth
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872335, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
       propertyPath: enemyPrefab
@@ -575,6 +544,7 @@ GameObject:
   - component: {fileID: 1753701774}
   - component: {fileID: 1753701773}
   - component: {fileID: 1753701772}
+  - component: {fileID: 1753701776}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -681,6 +651,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1753701776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753701771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52622355259075f4e906069709875d15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1157042761}
+  speed: 3
+  offset: {x: 0, y: 0, z: -1}
 --- !u!1 &1757065600
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,7 +803,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1846776116
 MonoBehaviour:
