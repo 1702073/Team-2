@@ -9,7 +9,7 @@ public class BattleSystem : MonoBehaviour
         Idle,
         Active,
     }
-    [SerializeField] private Transform enemyTransform;
+    [SerializeField] private EnemyGeneral[] enemies;
 
     private State state;
 
@@ -29,7 +29,13 @@ public class BattleSystem : MonoBehaviour
     private void StartBattle()
     {
         Debug.Log("StartBattle");
-        enemyTransform.GetComponent<EnemyGeneral>().Spawn();
         state = State.Active;
+
+        foreach (EnemyGeneral enemy in enemies)
+        {
+            enemy.Spawn();
+        }
     }
+
+
 }

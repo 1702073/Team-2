@@ -14,6 +14,14 @@ public class EnemyGeneral : MonoBehaviour
 
     public Vector2 enemyPosition;
 
+    public enum State
+    {
+        Idle,
+        Active,
+    }
+
+    public State state;
+
     public LayerMask AttackLayer;
 
     public float cooldown;
@@ -21,24 +29,41 @@ public class EnemyGeneral : MonoBehaviour
 
     public int enemyScore;
 
+    private void Start()
+    {
+        state = State.Idle;
+    }
+
     private void Update()
     {
-        // If the distance between the enemy and the player is less than or equal to one, then it will attack
-        if ((Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 1) && (attackReady == true))
-        {
-            Attack();
-        }
+       
 
-        if (enemyHealth <= 0)
+        switch (state)
         {
-            Death();
+            case State.Idle:
+
+                break;
+
+            case State.Active:
+                // If the distance between the enemy and the player is less than or equal to one, then it will attack
+                if ((Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 1) && (attackReady == true))
+                {
+                    Attack();
+                }
+
+                if (enemyHealth <= 0)
+                {
+                    Death();
+                }
+
+                break;
         }
     }
 
     public void Spawn()
     {
-
         transform.position = (enemyPosition);
+        state = State.Active;
     }
 
     public void Attack()
