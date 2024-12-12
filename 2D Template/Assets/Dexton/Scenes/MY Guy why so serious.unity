@@ -386,10 +386,10 @@ RectTransform:
   m_Father: {fileID: 157001806}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 326, y: -67}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &221276018
 MonoBehaviour:
@@ -464,6 +464,7 @@ GameObject:
   - component: {fileID: 270380464}
   - component: {fileID: 270380465}
   - component: {fileID: 270380466}
+  - component: {fileID: 270380467}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -682,6 +683,20 @@ MonoBehaviour:
   attackReady: 1
   distance: 1.65
   radius: 0.76
+--- !u!114 &270380467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270380456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7973f8103e3ca43ab1c17d26489d81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 6
+  playerMaxHealth: 6
 --- !u!1 &284626151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1419,10 +1434,10 @@ RectTransform:
   m_Father: {fileID: 157001806}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 198, y: -67}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &589984640
 MonoBehaviour:
@@ -3437,10 +3452,10 @@ RectTransform:
   m_Father: {fileID: 157001806}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 70, y: -67}
+  m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1615726356
 MonoBehaviour:
@@ -3665,7 +3680,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abea4f3a5e7cb3b41ae920a3372bbed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 0}
   enemyHealth: 5
+  enemyPosition: {x: 0, y: 0}
   AttackLayer:
     serializedVersion: 2
     m_Bits: 8

@@ -78,7 +78,7 @@ public class HealthHeartBar : MonoBehaviour
         for(int i = 0; i < hearts.Count; i++)
         {
             int heartStatusRemainder = (int)Mathf.Clamp(playerHealth - (i * 2), 0, 2);
-            hearts[i].SetHeartImage((HeartStatus)(heartStatusRemainder));
+            hearts[i].SetHeartImage((HealthHeart.HeartStatus)(heartStatusRemainder));
         }
     }
 
@@ -88,7 +88,7 @@ public class HealthHeartBar : MonoBehaviour
         newHeart.transform.SetParent(transform);
 
         HealthHeart heartComponent = newHeart.GetComponent<HealthHeart>();
-        heartComponent.SetHeartImage(HeartStatus.Empty);
+        heartComponent.SetHeartImage(HealthHeart.HeartStatus.Empty);
         hearts.Add(heartComponent);
     }
 

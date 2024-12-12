@@ -8,6 +8,13 @@ public class HealthHeart : MonoBehaviour
     public Sprite fullHeart, halfHeart, emptyHeart;
     Image heartImage;
 
+    public enum HeartStatus
+    {
+        Empty = 0,
+        Half = 1,
+        Full = 2
+    }
+
     private void Awake()
     {
         heartImage = GetComponent<Image>();
@@ -29,11 +36,4 @@ public class HealthHeart : MonoBehaviour
 
         }
     }
-}
-
-public enum HeartStatus
-{
-    Empty = 0,
-    Half = 1,
-    Full = 2
 }
