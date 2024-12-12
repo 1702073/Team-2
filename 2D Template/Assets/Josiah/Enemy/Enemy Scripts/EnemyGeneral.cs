@@ -49,7 +49,7 @@ public class EnemyGeneral : MonoBehaviour
         if (hit&&hit.collider.CompareTag("Player"))
         {
             // Attacks the player
-            hit.collider.GetComponent<PlayerStats>().playerHealth -= 1;
+            hit.collider.GetComponent<HealthHeartBar>().playerHealth -= 1;
         }
         
         attackReady = false;
