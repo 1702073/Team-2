@@ -13,7 +13,6 @@ public class PlayerPause : MonoBehaviour
         if (Input.GetKeyDown(pause) && pauseMenu.isPaused == false)
         {
             pauseMenu.Pause();
-
         }
         else if (Input.GetKeyDown(pause) && pauseMenu.isPaused == true)
         {
