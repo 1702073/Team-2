@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,10 +8,10 @@ public class ConsumableUse : MonoBehaviour
     public HealthHeartBar healthHeartBar;
     public Consumable consumableType;
 
+
     public void Start()
     {
-
-        healthHeartBar = GetComponent<HealthHeartBar>();
+        healthHeartBar = FindObjectOfType<HealthHeartBar>();
     }
 
     public enum Consumable
@@ -22,11 +23,25 @@ public class ConsumableUse : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void OnTriggerEnter()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (CompareTag("Player") && consumableType == 0)
+        if (collision.gameObject.CompareTag("Player") && consumableType == 0)
         {
-            healthHeartBar.playerHealth++;
+            FindObjectOfType<HealthHeartBar>().HealDamage(1);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Full_Heart)
+        {
+            FindObjectOfType<HealthHeartBar>().HealDamage(2);
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Salt)
+        {
+
+        }
+        else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Jar)
+        {
+
         }
     }
 }
