@@ -14,6 +14,7 @@ public class HealthHeartBar : MonoBehaviour
     public event Action OnPlayerHeal;
 
     public KeyCode healthUp;
+    public KeyCode healthDown;
 
     public float playerHealth = 6;
     public float playerMaxHealth = 6;
@@ -42,6 +43,11 @@ public class HealthHeartBar : MonoBehaviour
         if (Input.GetKeyDown(healthUp))
         {
             playerHealth++;
+            OnPlayerHeal?.Invoke();
+        }
+        if (Input.GetKeyDown(healthDown))
+        {
+            playerHealth--;
             OnPlayerHeal?.Invoke();
         }
 
@@ -105,5 +111,10 @@ public class HealthHeartBar : MonoBehaviour
     {
         playerHealth -= amount;
         OnPlayerDamaged?.Invoke();        
+    }
+    public void HealDamage(float amount)
+    {
+        playerHealth += amount;
+        OnPlayerHeal?.Invoke();
     }
 }
