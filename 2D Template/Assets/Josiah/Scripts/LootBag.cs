@@ -27,12 +27,12 @@ public class LootBag : MonoBehaviour
         return null;
     }
 
-    public void InstantiateLoot(Vector3 spawnPoition)
+    public void InstantiateLoot(Vector3 spawnPosition)
     {
         Loot droppedItem = GetDroppedItem();
         if (droppedItem != null)
         {
-            GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPoition, Quaternion.identity);
+            GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<ItemInstance>().AssignLoot(droppedItem);
 
             //float dropForce = 300f;

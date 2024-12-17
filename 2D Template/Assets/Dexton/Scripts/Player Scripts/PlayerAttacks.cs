@@ -7,17 +7,24 @@ public class PlayerAttacks : MonoBehaviour
 {
     public LayerMask AttackLayer;
 
+    private Vector2 mousePos;
+
     public float cooldown;
     public bool attackReady = true;
 
     public float distance;
     public float radius;
 
+
+    public void Start()
+    {
+        
+    }
+
     private void Update()
     {
-
-
-        if (Input.GetMouseButtonDown(0) && attackReady == true)
+        mousePos = Input.mousePosition;
+        if (Input.GetMouseButtonDown(0) && attackReady == true &&  90 > mousePos > 180)
         {
             Attack();
         }

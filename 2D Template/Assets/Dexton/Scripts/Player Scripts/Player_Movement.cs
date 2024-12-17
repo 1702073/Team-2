@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
+    public float walkSpeed = 3f;
+    private float moveSpeed = 3f;
+    public float runSpeed = 5f;
+    public KeyCode run = KeyCode.LeftShift;
 
     public Rigidbody2D rb2d;
     public Animator animator;
@@ -29,6 +32,14 @@ public class Player_Movement : MonoBehaviour
     void FixedUpdate()
     {        
         rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.fixedDeltaTime);
+        if (Input.GetKey(run))
+        {
+            moveSpeed = runSpeed;
+        }
+        else
+        {
+            moveSpeed = walkSpeed;
+        }
     }
 
 }
