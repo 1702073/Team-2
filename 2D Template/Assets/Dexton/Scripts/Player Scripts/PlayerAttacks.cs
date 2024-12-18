@@ -1,20 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerAttacks : MonoBehaviour
 {
     public LayerMask AttackLayer;
 
+    private Camera mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     private Vector2 mousePos;
 
-    public float cooldown;
-    public bool attackReady = true;
+    public Transform mouseRotate;
 
+    public float cooldown;
     public float distance;
     public float radius;
+    public bool attackReady = true;
 
+    public static Vector2 GetEnumFromDirection(Vector2 direction)
+    {
+        Vector2 result = Vector2.zero;
+
+        if (Vector2.Dot(direction, Vector2.up) > .5f)
+        {
+            result = Vector2.up;
+        }
+        else if (Vector2.Dot(direction, Vector2.down) > .5f)
+        {
+            result = Vector2.down;
+        }
+        else if (Vector2.Dot(direction, Vector2.left) > .5f)
+        {
+            result = Vector2.left;
+        }
+        else if (Vector2.Dot(direction, Vector2.right) > .5f)
+        {
+            result = Vector2.right;
+        }
+
+        return result;
+    }
 
     public void Start()
     {
@@ -23,8 +45,9 @@ public class PlayerAttacks : MonoBehaviour
 
     private void Update()
     {
-        mousePos = Input.mousePosition;
-        if (Input.GetMouseButtonDown(0) && attackReady == true &&  90 > mousePos > 180)
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        Debug.Log(mousePos);
+        if (Input.GetMouseButtonDown(0) && attackReady == true)
         {
             Attack();
         }
