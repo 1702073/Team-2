@@ -1422,7 +1422,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      idle_51: 585063011
+      idle_42: -1173455811
       idle_46: -395183970
       idle_33: 2024866786
       idle_53: -394192905
@@ -1470,19 +1470,19 @@ TextureImporter:
       idle_60: -1303749320
       idle_28: 2002707523
       idle_5: -640118159
+      idle_51: 585063011
       idle_12: -929548154
-      idle_32: 2024946045
       idle_23: -2011952445
-      idle_35: 1137595786
+      idle_32: 2024946045
       idle_29: -2013638056
       idle_9: -1701263197
-      idle_38: -742736626
+      idle_35: 1137595786
       idle_25: 796785680
+      idle_38: -742736626
       idle_18: -1919045308
-      idle_42: -1173455811
       idle_22: 151783277
-      idle_26: 1493748907
       idle_44: -336895086
+      idle_26: 1493748907
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

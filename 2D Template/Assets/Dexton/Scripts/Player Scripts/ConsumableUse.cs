@@ -8,7 +8,6 @@ public class ConsumableUse : MonoBehaviour
     public HealthHeartBar healthHeartBar;
     public Consumable consumableType;
 
-
     public void Start()
     {
         healthHeartBar = FindObjectOfType<HealthHeartBar>();
