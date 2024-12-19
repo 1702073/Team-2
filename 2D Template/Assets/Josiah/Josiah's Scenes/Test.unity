@@ -266,10 +266,11 @@ MonoBehaviour:
   AttackLayer:
     serializedVersion: 2
     m_Bits: 64
+  mouseRotate: {fileID: 0}
   cooldown: 0
-  attackReady: 1
   distance: 1.65
   radius: 0.76
+  attackReady: 1
 --- !u!114 &1680184807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bc5038ebfdd5e498e09920d7d2370f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  walkSpeed: 3
+  runSpeed: 5
+  run: 304
   rb2d: {fileID: 1680184813}
   animator: {fileID: 1680184811}
 --- !u!114 &1680184810
@@ -476,6 +479,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heartPrefab: {fileID: 2638022654510486076, guid: 8f70fd805f6be7b41a437cdab08d1cc3, type: 3}
   healthUp: 0
+  healthDown: 0
   playerHealth: 6
   playerMaxHealth: 6
 --- !u!1001 &1736810617
@@ -542,9 +546,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2181031945243872334, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
+      propertyPath: lootList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181031945243872334, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
+      propertyPath: lootList.Array.data[0]
+      value: 
+      objectReference: {fileID: 7505007482866955179, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+    - target: {fileID: 2181031945243872334, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
+      propertyPath: lootList.Array.data[1]
+      value: 
+      objectReference: {fileID: 1166191557961480871, guid: 773d219c838837b488da1fd3723b56fe, type: 3}
+    - target: {fileID: 2181031945243872334, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
+      propertyPath: lootList.Array.data[2]
+      value: 
+      objectReference: {fileID: 2576865228374738679, guid: 2b7324357a82a4f4b99230d9f133eab5, type: 3}
     - target: {fileID: 2181031945243872335, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
       propertyPath: enemyHealth
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872335, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
       propertyPath: enemyPrefab
@@ -891,7 +911,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -274.26, y: 212.37}
+  m_AnchoredPosition: {x: -269.26, y: 212.37}
   m_SizeDelta: {x: 414.4792, y: 76.2628}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2143057835
@@ -914,7 +934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 250
+  m_text: 'Fwaeh:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
