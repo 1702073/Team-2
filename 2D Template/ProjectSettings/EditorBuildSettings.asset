@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Dexton/Scenes/Title.unity
+    path: Assets/Ultimate Folder Of Everything/Title.unity
     guid: 102f6bf23b4cc334b9bb2d761724166c
   - enabled: 1
     path: Assets/Dexton/Scenes/MY Guy why so serious.unity
     guid: f335c5d3252cb604da84c9732d305e80
   - enabled: 1
-    path: Assets/Dexton/Scenes/You Died.unity
+    path: Assets/Ultimate Folder Of Everything/You Died.unity
     guid: 9e14ebd0dd1b41b4098740e28c9a569c
   m_configObjects: {}
