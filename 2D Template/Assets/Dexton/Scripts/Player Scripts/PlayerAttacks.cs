@@ -8,7 +8,7 @@ public class PlayerAttacks : MonoBehaviour
     private Vector2 mousePos;
 
     public Transform mouseRotate;
-
+    public Animator animator;
     private int attackDirector;
     public float cooldown;
     public float distance;
@@ -56,6 +56,10 @@ public class PlayerAttacks : MonoBehaviour
     public void Attack()
     {
         Vector2 Direction = GetFromDirection(GetAttackDirection());
+
+        animator.SetTrigger("Attack");
+        animator.SetFloat("Attack Horizontal", Direction.x);
+        animator.SetFloat("Attack Vertical", Direction.y);
 
         if (Direction == Vector2.up)
         {
