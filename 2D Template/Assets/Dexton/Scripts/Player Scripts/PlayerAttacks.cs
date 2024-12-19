@@ -9,12 +9,13 @@ public class PlayerAttacks : MonoBehaviour
 
     public Transform mouseRotate;
 
+    private int attackDirector;
     public float cooldown;
     public float distance;
     public float radius;
     public bool attackReady = true;
 
-    public static Vector2 GetEnumFromDirection(Vector2 direction)
+    public static Vector2 GetFromDirection(Vector2 direction)
     {
         Vector2 result = Vector2.zero;
 
@@ -45,8 +46,6 @@ public class PlayerAttacks : MonoBehaviour
 
     private void Update()
     {
-        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
-        Debug.Log(mousePos);
         if (Input.GetMouseButtonDown(0) && attackReady == true)
         {
             Attack();
@@ -56,6 +55,26 @@ public class PlayerAttacks : MonoBehaviour
 
     public void Attack()
     {
+        Vector2 Direction = GetFromDirection(GetAttackDirection());
+
+        if (Direction == Vector2.up)
+        {
+            attackDirector = 0;
+        }
+        else if (Direction == Vector2.down)
+        {
+            attackDirector = 1;
+        }
+        else if (Direction == Vector2.left)
+        {
+            attackDirector = 2;                    
+        }
+        else if (Direction == Vector2.right)
+        {
+            attackDirector = 3;
+        }
+
+
         // Spawn a circle hitbox and sees what it hit
         var hit = Physics2D.CircleCast(GetAttackSpot(), radius, Vector2.zero, 0, AttackLayer);
 
