@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2181031945243872329}
+  - component: {fileID: -2923575659281330}
   - component: {fileID: 2181031945243872330}
   - component: {fileID: 2181031945243872331}
   - component: {fileID: 2181031945243872335}
@@ -36,6 +37,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &-2923575659281330
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2181031945243872324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.48, y: 3.01}
+    newSize: {x: 3.48, y: 3.01}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.48, y: 3.01}
+  m_EdgeRadius: 0
 --- !u!212 &2181031945243872330
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -123,6 +150,7 @@ MonoBehaviour:
   enemyPrefab: {fileID: 0}
   enemyHealth: 3
   enemyPosition: {x: 0, y: 0}
+  state: 0
   AttackLayer:
     serializedVersion: 2
     m_Bits: 8
