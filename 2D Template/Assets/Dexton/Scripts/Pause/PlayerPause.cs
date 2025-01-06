@@ -1,11 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerPause : MonoBehaviour
 {
     public PauseMenu pauseMenu;
-
     public KeyCode pause = KeyCode.Escape;
 
     public void Update()

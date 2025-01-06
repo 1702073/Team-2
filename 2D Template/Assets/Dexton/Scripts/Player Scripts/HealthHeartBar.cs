@@ -1,37 +1,28 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class HealthHeartBar : MonoBehaviour
 {
+    public event Action OnPlayerDamaged, OnPlayerDeath, OnPlayerHeal;
+    public float playerHealth = 6, playerMaxHealth = 6;
     public GameObject heartPrefab;
+    public KeyCode healthUp, healthDown;
 
-    public event Action OnPlayerDamaged;
-    public event Action OnPlayerDeath;
-    public event Action OnPlayerHeal;
-
-    public KeyCode healthUp;
-    public KeyCode healthDown;
-
-    public float playerHealth = 6;
-    public float playerMaxHealth = 6;
     List<HealthHeart> hearts = new List<HealthHeart>();
 
     private void OnEnable()
     {
         OnPlayerDamaged += DrawHearts;
         OnPlayerHeal += DrawHearts;
-
     }
+
     private void OnDisable()
     {
         OnPlayerDamaged -= DrawHearts;
         OnPlayerHeal -= DrawHearts;
     }
-
 
     private void Start()
     {
@@ -50,12 +41,10 @@ public class HealthHeartBar : MonoBehaviour
             playerHealth--;
             OnPlayerHeal?.Invoke();
         }
-
         if (playerHealth > playerMaxHealth)
         {
             playerHealth = playerMaxHealth;
         }
-
         if (playerHealth <= 0)
         {
             playerHealth = 0;
@@ -65,16 +54,13 @@ public class HealthHeartBar : MonoBehaviour
         }
     }
 
-
     public void DrawHearts()
     {
         ClearHearts();
 
-        //Determine how many hearts to make total
-        //Based on max health
-        float maxHealthRemainder = playerMaxHealth %2; // 5/2=3 remainder1
-        int heartsToMake = (int)((playerMaxHealth / 2) + maxHealthRemainder);
-        //make 5 hearts (2)(2)(1)
+        //Determine how many hearts to make total Based on max health        
+        float maxHealthRemainder = playerMaxHealth %2;
+        int heartsToMake = (int)((playerMaxHealth / 2) + maxHealthRemainder); //make 5 hearts (2)(2)(1)        
 
         for(int i = 0; i < heartsToMake; i++)
         {
@@ -112,6 +98,7 @@ public class HealthHeartBar : MonoBehaviour
         playerHealth -= amount;
         OnPlayerDamaged?.Invoke();        
     }
+
     public void HealDamage(float amount)
     {
         playerHealth += amount;
