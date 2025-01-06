@@ -52,10 +52,10 @@ public class PlayerAttacks : MonoBehaviour
         // Spawn a circle hitbox and sees what it hit
         var hit = Physics2D.CircleCast(GetAttackSpot(), radius, Vector2.zero, 0, AttackLayer);
 
-        // See if it hit the player
+        // See if it hit the enemy
         if (hit&&hit.collider.CompareTag("Enemy"))
         {
-            // Attacks the player
+            // Attacks the enemy
             hit.collider.GetComponent<EnemyGeneral>().enemyHealth -= 1;
         }
         attackReady = false;
