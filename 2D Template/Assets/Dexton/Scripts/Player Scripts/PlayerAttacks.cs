@@ -3,16 +3,11 @@ using UnityEngine;
 public class PlayerAttacks : MonoBehaviour
 {
     public LayerMask AttackLayer;
-
-    private Camera mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     private Vector2 mousePos;
 
-    public Transform mouseRotate;
+    public Animator animator;
 
-    private int attackDirector;
-    public float cooldown;
-    public float distance;
-    public float radius;
+    public float cooldown, distance, radius;
     public bool attackReady = true;
 
     public static Vector2 GetFromDirection(Vector2 direction)
@@ -35,13 +30,7 @@ public class PlayerAttacks : MonoBehaviour
         {
             result = Vector2.right;
         }
-
         return result;
-    }
-
-    public void Start()
-    {
-        
     }
 
     private void Update()
@@ -50,42 +39,27 @@ public class PlayerAttacks : MonoBehaviour
         {
             Attack();
         }
-
     } 
 
     public void Attack()
     {
         Vector2 Direction = GetFromDirection(GetAttackDirection());
 
-        if (Direction == Vector2.up)
-        {
-            attackDirector = 0;
-        }
-        else if (Direction == Vector2.down)
-        {
-            attackDirector = 1;
-        }
-        else if (Direction == Vector2.left)
-        {
-            attackDirector = 2;                    
-        }
-        else if (Direction == Vector2.right)
-        {
-            attackDirector = 3;
-        }
-
+        animator.SetTrigger("Attack");
+        animator.SetFloat("Attack Horizontal", Direction.x);
+        animator.SetFloat("Attack Vertical", Direction.y);
 
         // Spawn a circle hitbox and sees what it hit
         var hit = Physics2D.CircleCast(GetAttackSpot(), radius, Vector2.zero, 0, AttackLayer);
 
-        // See if it hit the player
+        // See if it hit the enemy
         if (hit&&hit.collider.CompareTag("Enemy"))
         {
-            // Attacks the player
+            // Attacks the enemy
             hit.collider.GetComponent<EnemyGeneral>().enemyHealth -= 1;
         }
-
         attackReady = false;
+
         // Forces the enemy to wait before it can attack again
         Invoke(nameof(ResetAttack), cooldown);
     }
@@ -93,7 +67,6 @@ public class PlayerAttacks : MonoBehaviour
     private Vector2 GetAttackDirection()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized * distance;
 
         return direction;
@@ -109,7 +82,6 @@ public class PlayerAttacks : MonoBehaviour
         Gizmos.DrawLine(transform.position, transform.position + (Vector3)GetAttackDirection());
         Gizmos.DrawWireSphere(GetAttackSpot(), radius);
     }
-
 
     private void ResetAttack()
     {

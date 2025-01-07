@@ -1,12 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
-    public float walkSpeed = 3f;
+    public float walkSpeed = 3f, runSpeed = 5f;
     private float moveSpeed = 3f;
-    public float runSpeed = 5f;
     public KeyCode run = KeyCode.LeftShift;
 
     public Rigidbody2D rb2d;
@@ -22,7 +19,7 @@ public class Player_Movement : MonoBehaviour
         //Input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        
+         
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
@@ -41,5 +38,4 @@ public class Player_Movement : MonoBehaviour
             moveSpeed = walkSpeed;
         }
     }
-
 }
