@@ -36,6 +36,7 @@ public class EnemyGeneral : MonoBehaviour
     private void Start()
     {
         state = State.Idle;
+        healthBar.UpdateHealthBar(enemyHealth, enemyMaxHealth);
     }
 
     private void Update()
@@ -50,7 +51,9 @@ public class EnemyGeneral : MonoBehaviour
 
             case State.Active:
                 healthBar  = GetComponentInChildren<FloatingHealthBar>();
-                
+
+                healthBar.UpdateHealthBar(enemyHealth, enemyMaxHealth);
+
                 // If the distance between the enemy and the player is less than or equal to one, then it will attack
                 if ((Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 1) && (attackReady == true))
                 {

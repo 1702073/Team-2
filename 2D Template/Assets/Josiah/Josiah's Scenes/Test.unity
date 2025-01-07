@@ -263,7 +263,7 @@ RectTransform:
   m_GameObject: {fileID: 239269046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.04, y: 0.01, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1236701073}
@@ -273,7 +273,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000036955, y: -0.00000023842}
+  m_AnchoredPosition: {x: 0.000000044887, y: 1.88}
   m_SizeDelta: {x: 101.6, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &239269048
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 239269048}
-  camera: {fileID: 1753701774}
+  cam: {fileID: 1753701774}
   target: {fileID: 1736810618}
   offset: {x: 0, y: 1, z: 0}
 --- !u!1 &402586814
@@ -473,7 +473,7 @@ RectTransform:
   m_GameObject: {fileID: 711552427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.01, z: 0.01}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 239269047}
@@ -482,7 +482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &711552429
@@ -664,10 +664,10 @@ MonoBehaviour:
   AttackLayer:
     serializedVersion: 2
     m_Bits: 64
-  mouseRotate: {fileID: 0}
+  animator: {fileID: 1680184811}
   cooldown: 0
-  distance: 1.65
-  radius: 0.76
+  distance: 6.3
+  radius: 8.19
   attackReady: 1
 --- !u!114 &1680184807
 MonoBehaviour:
@@ -875,11 +875,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6099a897ca533434087b1593b343839d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 6
+  playerMaxHealth: 6
   heartPrefab: {fileID: 2638022654510486076, guid: 8f70fd805f6be7b41a437cdab08d1cc3, type: 3}
   healthUp: 0
   healthDown: 0
-  playerHealth: 6
-  playerMaxHealth: 6
 --- !u!1001 &1736810617
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ PrefabInstance:
       objectReference: {fileID: 239269049}
     - target: {fileID: 2181031945243872335, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
       propertyPath: enemyHealth
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872335, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
       propertyPath: enemyPrefab
@@ -1118,9 +1118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52622355259075f4e906069709875d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1680184815}
   speed: 3
   offset: {x: 0, y: 0, z: -1}
+  target: {fileID: 1680184815}
 --- !u!1 &1757065600
 GameObject:
   m_ObjectHideFlags: 0
