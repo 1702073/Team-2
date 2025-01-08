@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static GameManager;
 
 public class EnemyGeneral : MonoBehaviour
 {
@@ -50,6 +51,8 @@ public class EnemyGeneral : MonoBehaviour
                 break;
 
             case State.Active:
+                GameManager.enemiesActivated += 1;
+
                 healthBar  = GetComponentInChildren<FloatingHealthBar>();
 
                 healthBar.UpdateHealthBar(enemyHealth, enemyMaxHealth);
