@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,13 +5,13 @@ public class HealthHeart : MonoBehaviour
 {
     public Sprite fullHeart, halfHeart, emptyHeart;
     Image heartImage;
-
     public enum HeartStatus
     {
         Empty = 0,
         Half = 1,
         Full = 2
     }
+
 
     private void Awake()
     {
@@ -33,7 +31,6 @@ public class HealthHeart : MonoBehaviour
             case HeartStatus.Full:
                 heartImage.sprite = fullHeart;
                 break;
-
         }
     }
 }
