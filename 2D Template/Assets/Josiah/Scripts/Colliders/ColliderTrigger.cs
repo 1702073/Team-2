@@ -8,6 +8,7 @@ public class ColliderTrigger : MonoBehaviour
     public event EventHandler OnPlayerEnterTrigger;
     private void OnTriggerEnter2D(Collider2D collider)
     {
+        // Check if object has the Player tag then check if it's inside the collider or not
         if (collider.CompareTag("Player"))
         {
             Player_Movement player = collider.GetComponent<Player_Movement>();
