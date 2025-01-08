@@ -7,6 +7,7 @@ public class Player_Movement : MonoBehaviour
     public float walkSpeed = 3f, runSpeed = 5f;
     [SerializeField] private float moveSpeed = 3f;
     public float stamina, maxStamina, runCost, chargeRate;
+    public bool canSprint = true;
     public KeyCode run = KeyCode.LeftShift;
 
     public Rigidbody2D rb2d;
@@ -31,37 +32,63 @@ public class Player_Movement : MonoBehaviour
             animator.SetFloat("Vertical", movement.y);
             animator.SetFloat("Speed", movement.sqrMagnitude);
         }
-    }
 
-    void FixedUpdate()
-    {        
-        rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.fixedDeltaTime);
-        if (Input.GetKey(run) && stamina > 0)
+        rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.deltaTime);
+
+        if (Input.GetKey(run) && stamina > 0 && canSprint == true)
         {
             stamina -= runCost * Time.deltaTime;
-            if (stamina < 0f) stamina = 0f;
+
+            if (stamina <= 0f)
+                stamina = 0f;
+
             StaminaBar.fillAmount = stamina / maxStamina;
 
             moveSpeed = runSpeed;
-            if (recharge != null) StopCoroutine(recharge);
-            recharge = StartCoroutine((string)RechargeStamina());
+
+            StopAllCoroutines();
         }
-        else
+        else if (Input.GetKeyUp(run) && canSprint == true)
         {
             moveSpeed = walkSpeed;
+
+            StopAllCoroutines();
+            StartCoroutine(RechargeStamina());
+        }
+
+        if (stamina <= 0f && canSprint)
+        {
+            canSprint = false;
+
+            moveSpeed = walkSpeed;
+
+            StopAllCoroutines();
+            StartCoroutine(RechargeStamina());
+        }
+        else if (stamina >= maxStamina)
+        {
+            canSprint = true;
         }
     }
 
-    private IEnumerable RechargeStamina()
+    void FixedUpdate()
+    {
+    }
+
+    private IEnumerator RechargeStamina()
     {
         yield return new WaitForSeconds(1f);
 
         while(stamina < maxStamina)
         {
-            stamina += chargeRate / 10f;
-            if (stamina > maxStamina) stamina = maxStamina;
+            stamina += chargeRate / 100f;
+
+            if (stamina > maxStamina)
+                stamina = maxStamina;
+
             StaminaBar.fillAmount = stamina / maxStamina;
-            yield return new WaitForSeconds(1f);
+
+            yield return new WaitForSeconds(.01f);
         }
 
     }
