@@ -718,13 +718,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bc5038ebfdd5e498e09920d7d2370f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 3
-  runSpeed: 5
-  moveSpeed: 3
+  walkSpeed: 30
+  runSpeed: 50
+  moveSpeed: 30
   stamina: 100
   maxStamina: 100
   runCost: 25
   chargeRate: 33
+  canSprint: 1
   run: 304
   rb2d: {fileID: 270380459}
   animator: {fileID: 270380463}
@@ -3889,6 +3890,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2181031945243872324, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
   enemyHealth: 5
+  enemyMaxHealth: 3
+  healthBar: {fileID: 0}
   enemyPosition: {x: 0, y: 0}
   state: 0
   AttackLayer:
