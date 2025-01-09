@@ -1,28 +1,37 @@
+using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public event EventHandler OnPlayerEnterTrigger;
     public static int enemiesActivated;
 
-    //Decide how many enemies will be in the game and then put that number here and then finish coding the end of the game
     //public void EndGame()
     //{
-    //    if (enemiesActivated == && Input.GetKeyDown(KeyCode.F))
-    //    {
-
-    //    }
-    //}
-
-    // Add the check collider at front door, number of ghosts, and when player presses F to do end cutscene
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.F))
-    //    {
-    //        door.OpenDoor();
-    //    }
 
     //}
 
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        // Check if object has the Player tag then check if it's inside the collider or not
+        if (collider.CompareTag("Player"))
+        {
+            Player_Movement player = collider.GetComponent<Player_Movement>();
+            if (player != null)
+            {
+                //Player inside trigger area
+                Debug.Log("Player inside trigger, press F");
+                OnPlayerEnterTrigger?.Invoke(this, EventArgs.Empty);
+
+                if (player != null && enemiesActivated == 1 && Input.GetKey(KeyCode.E))
+                {
+                    Debug.Log("Game Over");
+                    //EndGame();
+                }
+            }
+        }
+    }
 }
