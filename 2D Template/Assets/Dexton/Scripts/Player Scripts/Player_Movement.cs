@@ -69,10 +69,11 @@ public class Player_Movement : MonoBehaviour
         {
             canSprint = true;
         }
-    }
 
-    void FixedUpdate()
-    {
+        if(canSprint == false)
+        {
+
+        }
     }
 
     private IEnumerator RechargeStamina()
