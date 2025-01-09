@@ -14708,7 +14708,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 1
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -14721,10 +14721,10 @@ Tilemap:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   m_TileSpriteArray:
-  - m_RefCount: 1
-    m_Data: {fileID: -611741680, guid: 689c185dc1be1224ab973ae165d8913b, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -611741680, guid: 689c185dc1be1224ab973ae165d8913b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 1
     m_Data:
@@ -14916,6 +14916,7 @@ GameObject:
   - component: {fileID: 1315086157}
   - component: {fileID: 1315086159}
   - component: {fileID: 1315086158}
+  - component: {fileID: 1315086160}
   m_Layer: 0
   m_Name: Tilemap- collide objects
   m_TagString: Untagged
@@ -15179,6 +15180,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1315086160
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315086156}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1576755197
 GameObject:
   m_ObjectHideFlags: 0
@@ -15190,6 +15208,7 @@ GameObject:
   - component: {fileID: 1576755198}
   - component: {fileID: 1576755200}
   - component: {fileID: 1576755199}
+  - component: {fileID: 1576755201}
   m_Layer: 0
   m_Name: Tilemap- collide house
   m_TagString: Untagged
@@ -15333,6 +15352,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1576755201
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1576755197}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &1663346325
 GameObject:
   m_ObjectHideFlags: 0
@@ -15344,6 +15380,7 @@ GameObject:
   - component: {fileID: 1663346326}
   - component: {fileID: 1663346328}
   - component: {fileID: 1663346327}
+  - component: {fileID: 1663346329}
   m_Layer: 0
   m_Name: Tilemap- collide door
   m_TagString: Untagged
@@ -15487,6 +15524,23 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1663346329
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663346325}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1 &2103729807
 GameObject:
   m_ObjectHideFlags: 0
@@ -15498,6 +15552,7 @@ GameObject:
   - component: {fileID: 2103729808}
   - component: {fileID: 2103729810}
   - component: {fileID: 2103729809}
+  - component: {fileID: 2103729811}
   m_Layer: 0
   m_Name: Tilemap- collide
   m_TagString: Untagged
@@ -17145,3 +17200,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &2103729811
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103729807}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
