@@ -111,6 +111,7 @@ public class EnemyGeneral : MonoBehaviour
     {
         GetComponent<LootBag>().InstantiateLoot(transform.position);
         Score.scoreValue += enemyScore;
+        Debug.Log("Enemy defeated");
         Destroy(gameObject);
     }
 
