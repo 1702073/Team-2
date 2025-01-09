@@ -3890,8 +3890,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2181031945243872324, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
   enemyHealth: 5
-  enemyMaxHealth: 3
-  healthBar: {fileID: 0}
   enemyPosition: {x: 0, y: 0}
   state: 0
   AttackLayer:
