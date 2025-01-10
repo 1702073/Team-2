@@ -7,7 +7,7 @@ public class Player_Movement : MonoBehaviour
     public float walkSpeed = 3f, runSpeed = 5f;
     [SerializeField] private float moveSpeed = 3f;
     public float stamina, maxStamina, runCost, chargeRate;
-    public bool canSprint = true;
+    static public bool canSprint = true;
     public KeyCode run = KeyCode.LeftShift;
 
     public Rigidbody2D rb2d;
