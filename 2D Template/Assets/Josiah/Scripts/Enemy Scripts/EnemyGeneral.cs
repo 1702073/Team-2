@@ -34,6 +34,11 @@ public class EnemyGeneral : MonoBehaviour
 
     public int enemyScore;
 
+    private void OnDestroy()
+    {
+        enemiesDestroyed++;
+    }
+
     private void Start()
     {
         state = State.Idle;
@@ -42,8 +47,6 @@ public class EnemyGeneral : MonoBehaviour
 
     private void Update()
     {
-       
-
         switch (state)
         {
             case State.Idle:
@@ -51,8 +54,6 @@ public class EnemyGeneral : MonoBehaviour
                 break;
 
             case State.Active:
-                GameManager.enemiesActivated += 1;
-
                 healthBar  = GetComponentInChildren<FloatingHealthBar>();
 
                 healthBar.UpdateHealthBar(enemyHealth, enemyMaxHealth);
