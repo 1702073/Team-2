@@ -10,11 +10,11 @@ public class changestaminacolor : MonoBehaviour
     public Sprite Red;
 
     // Start is called before the first frame update
-    void ChangeSprite()
+    void Update()
     {
         if(Player_Movement.canSprint == false)
-            StamBar.sprite = Green;
-        else if (Player_Movement.canSprint == true)
             StamBar.sprite = Red;
+        else if (Player_Movement.canSprint == true)
+            StamBar.sprite = Green;
     }
 }

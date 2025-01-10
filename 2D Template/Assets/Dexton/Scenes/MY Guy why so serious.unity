@@ -724,7 +724,6 @@ MonoBehaviour:
   maxStamina: 100
   runCost: 25
   chargeRate: 33
-  canSprint: 1
   run: 304
   rb2d: {fileID: 270380459}
   animator: {fileID: 270380463}
@@ -6855,14 +6854,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3883875, g: 0.745283, b: 0.38318795, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1d0f6d24242d6fe4c9df0680133fff34, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5c1fab10f6427a43956c60613b8880d, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6893,7 +6892,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StamBar: {fileID: 779200497}
-  newSprite: {fileID: 0}
+  Green: {fileID: 21300000, guid: a5c1fab10f6427a43956c60613b8880d, type: 3}
+  Red: {fileID: 21300000, guid: 2e9edebfbddf22747a48d61c782e565b, type: 3}
 --- !u!1 &791556589
 GameObject:
   m_ObjectHideFlags: 0
@@ -8777,6 +8777,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2181031945243872324, guid: 0f09297a860c9cc4fbeb129c75d6de9e, type: 3}
   enemyHealth: 5
+  enemyMaxHealth: 3
+  healthBar: {fileID: 0}
   enemyPosition: {x: 0, y: 0}
   state: 0
   AttackLayer:
