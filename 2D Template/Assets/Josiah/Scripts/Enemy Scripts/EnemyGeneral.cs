@@ -34,6 +34,8 @@ public class EnemyGeneral : MonoBehaviour
 
     public int enemyScore;
 
+    private Shake shake;
+
     private void OnDestroy()
     {
         enemiesDestroyed++;

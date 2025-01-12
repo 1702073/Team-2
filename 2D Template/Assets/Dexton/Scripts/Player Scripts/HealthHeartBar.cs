@@ -10,6 +10,8 @@ public class HealthHeartBar : MonoBehaviour
     public GameObject heartPrefab;
     public KeyCode healthUp, healthDown;
 
+    private Shake shake;
+
     List<HealthHeart> hearts = new List<HealthHeart>();
 
     private void OnEnable()
@@ -26,7 +28,8 @@ public class HealthHeartBar : MonoBehaviour
 
     private void Start()
     {
-       DrawHearts ();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        DrawHearts ();
     }
 
     private void Update()
@@ -95,6 +98,7 @@ public class HealthHeartBar : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
+        shake.CamShake();
         playerHealth -= amount;
         OnPlayerDamaged?.Invoke();        
     }
