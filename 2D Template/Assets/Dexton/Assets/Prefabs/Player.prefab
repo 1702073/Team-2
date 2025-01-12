@@ -138,7 +138,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8336123, y: 1.8675933}
+  m_Size: {x: 0.5, y: 0.5}
   m_EdgeRadius: 0
 --- !u!70 &8538700132624134870
 CapsuleCollider2D:
@@ -190,9 +190,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 3
   runSpeed: 5
+  moveSpeed: 3
+  stamina: 0
+  maxStamina: 0
+  runCost: 0
+  chargeRate: 0
   run: 304
   rb2d: {fileID: 8538700132624134857}
   animator: {fileID: 8538700132624134861}
+  StaminaBar: {fileID: 0}
 --- !u!114 &8538700132624134866
 MonoBehaviour:
   m_ObjectHideFlags: 0
