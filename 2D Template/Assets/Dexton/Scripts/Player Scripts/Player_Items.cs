@@ -4,12 +4,19 @@ using UnityEngine;
 
 public class Player_Items : MonoBehaviour
 {
-    public ConsumableUse ConsumableUse;
+    public enum IsHolding
+    {   
+        Nothing = 0,
+        Salt = 1,
+        Jar = 2
+    }
+
+    public IsHolding isHolding;
 
     // Start is called before the first frame update
     void Start()
     {
-        ConsumableUse = FindObjectOfType<ConsumableUse>();
+        
     }
 
     // Update is called once per frame
