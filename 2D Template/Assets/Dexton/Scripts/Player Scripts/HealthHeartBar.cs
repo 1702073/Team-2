@@ -28,8 +28,8 @@ public class HealthHeartBar : MonoBehaviour
 
     private void Start()
     {
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         DrawHearts ();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     private void Update()

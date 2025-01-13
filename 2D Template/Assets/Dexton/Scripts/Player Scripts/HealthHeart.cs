@@ -12,7 +12,6 @@ public class HealthHeart : MonoBehaviour
         Full = 2
     }
 
-
     private void Awake()
     {
         heartImage = GetComponent<Image>();
