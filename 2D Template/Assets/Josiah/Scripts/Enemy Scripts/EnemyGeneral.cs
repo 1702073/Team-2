@@ -29,12 +29,12 @@ public class EnemyGeneral : MonoBehaviour
 
     public LayerMask AttackLayer;
 
+    public float enemyAttackDamage;
     public float cooldown;
     public bool attackReady = true;
+    public float attackDistance;
 
     public int enemyScore;
-
-    private Shake shake;
 
     private void OnDestroy()
     {
@@ -61,7 +61,7 @@ public class EnemyGeneral : MonoBehaviour
                 healthBar.UpdateHealthBar(enemyHealth, enemyMaxHealth);
 
                 // If the distance between the enemy and the player is less than or equal to one, then it will attack
-                if ((Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= 1) && (attackReady == true))
+                if ((Vector2.Distance(transform.position, GameObject.FindGameObjectWithTag("Player").transform.position) <= attackDistance) && (attackReady == true))
                 {
                     Attack();
                 }
@@ -84,13 +84,13 @@ public class EnemyGeneral : MonoBehaviour
     public void Attack()
     {
         // Spawn a circle hitbox and sees what it hit
-        var hit = Physics2D.CircleCast(transform.position + Vector3.up, 1, Vector2.zero, 0, AttackLayer);
+        var hit = Physics2D.CircleCast(transform.position, attackDistance, Vector2.zero, 0, AttackLayer);
 
         // See if it hit the player
         if (hit&&hit.collider.CompareTag("Player"))
         {
             // Attacks the player
-            hit.collider.GetComponent<HealthHeartBar>().playerHealth -= 1;
+            hit.collider.GetComponent<HealthHeartBar>().TakeDamage(enemyAttackDamage);
         }
         
         attackReady = false;
@@ -104,7 +104,7 @@ public class EnemyGeneral : MonoBehaviour
         attackReady = true;
     }
 
-    public void TakeDamage( int damage)
+    public void EnemyTakeDamage( int damage)
     {
         enemyHealth -= damage;
         healthBar.UpdateHealthBar(enemyHealth, enemyMaxHealth);
@@ -116,6 +116,11 @@ public class EnemyGeneral : MonoBehaviour
         Score.scoreValue += enemyScore;
         Debug.Log("Enemy defeated");
         Destroy(gameObject);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
 
 }

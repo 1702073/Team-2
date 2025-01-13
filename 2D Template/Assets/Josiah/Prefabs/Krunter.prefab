@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2181031945243872328}
   - component: {fileID: 2181031945243872334}
   m_Layer: 6
-  m_Name: Enemy
+  m_Name: Krunter
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 901821142271261441}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &-2923575659281330
 BoxCollider2D:
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1c1f849d647600841a31d40f4b63303c, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -126,7 +126,7 @@ Animator:
   m_GameObject: {fileID: 2181031945243872324}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a5ab76a0559400548942ab5cd18b652f, type: 2}
+  m_Controller: {fileID: 9100000, guid: b946df2ba723c364da9220eefe9eb53b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -157,8 +157,10 @@ MonoBehaviour:
   AttackLayer:
     serializedVersion: 2
     m_Bits: 8
+  enemyAttackDamage: 2
   cooldown: 10
   attackReady: 1
+  attackDistance: 0
   enemyScore: 15
 --- !u!114 &2181031945243872328
 MonoBehaviour:
