@@ -1,16 +1,16 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using static Player_Items;
 
 public class ConsumableUse : MonoBehaviour
 {
     public HealthHeartBar healthHeartBar;
     public Consumable consumableType;
+    public Player_Items player_Items;
 
     public void Start()
     {
         healthHeartBar = FindObjectOfType<HealthHeartBar>();
+        player_Items = FindObjectOfType<Player_Items>();
     }
 
     public enum Consumable
@@ -36,7 +36,8 @@ public class ConsumableUse : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Salt)
         {
-
+            Player_Items.isHolding = IsHolding.Salt;
+            Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Jar)
         {
