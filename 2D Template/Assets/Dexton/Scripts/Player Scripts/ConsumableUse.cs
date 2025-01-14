@@ -25,7 +25,7 @@ public class ConsumableUse : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") && consumableType == 0)
+        if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Full_Heart)
         {
             FindObjectOfType<HealthHeartBar>().HealDamage(1);
             Destroy(gameObject);

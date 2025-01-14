@@ -12,6 +12,7 @@ public class Player_Items : MonoBehaviour
     }
 
     public IsHolding isHolding;
+    public KeyCode UseConsumable = KeyCode.F;
     private GameObject Bottle;
     private GameObject Salt;
 
@@ -34,6 +35,8 @@ public class Player_Items : MonoBehaviour
         {
             Salt.SetActive(true); ;
             Bottle.SetActive(false);
+
+            if (Input.getKey)
         }
         else if (isHolding == IsHolding.Bottle)
         {
