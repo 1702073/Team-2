@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 020ace9592df2894a8828b01b41cfd25
+guid: b4f0829fc52af9e40a6a8a5eaabac906
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,49 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d8c1fc226cb8dce41a89b4ac2306c42a
-      internalID: 682070696
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da22334c21e6fa2439ee897f389a8597
-      internalID: -716000865
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_2
+      name: Slingles Move Right Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee6df621e594c34d8d6cbc5a59cabb0
-      internalID: -1203743181
+      spriteID: dcbdc2f7ebe45fa4e94c69ca6be00ef1
+      internalID: -268281913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_3
+      name: Slingles Move Right Spritesheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +166,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3f8fb2227faef74ab531e8809e19f1b
-      internalID: -1212536473
+      spriteID: 61042833474da4b49bff0b02e900d53e
+      internalID: -1851634687
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_4
+      name: Slingles Move Right Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eddd1b6e40125540ae8fbe38a6d96c5
+      internalID: 859910556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingles Move Right Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c38c7e0c57941c4ca22e0418938499b
+      internalID: 1142151461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingles Move Right Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c99b36c5c3df567418abe90c4cf3b9f5
-      internalID: 1334007449
+      spriteID: ee6976705d3662b4a801bfd66f42f3c9
+      internalID: 872072575
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_5
+      name: Slingles Move Right Spritesheet_5
       rect:
         serializedVersion: 2
         x: 128
@@ -250,8 +250,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bddd6d4d0852224ebaf65919d0935a9
-      internalID: 44059340
+      spriteID: 93ce91b4ba67b514ca67d668677b0567
+      internalID: -385899932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingles Move Right Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6576895cc88b57b40961f0a6ae9dfb74
+      internalID: -125570792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingles Move Right Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778bf03a227ea724096921bcd8894b96
+      internalID: -225463860
       vertices: []
       indices: 
       edges: []
@@ -267,12 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Krunter Up Attack Spritesheet_2: -1203743181
-      Krunter Up Attack Spritesheet_0: 682070696
-      Krunter Up Attack Spritesheet_1: -716000865
-      Krunter Up Attack Spritesheet_5: 44059340
-      Krunter Up Attack Spritesheet_4: 1334007449
-      Krunter Up Attack Spritesheet_3: -1212536473
+      Slingles Move Right Spritesheet_7: -225463860
+      Slingles Move Right Spritesheet_6: -125570792
+      Slingles Move Right Spritesheet_1: -1851634687
+      Slingles Move Right Spritesheet_2: 859910556
+      Slingles Move Right Spritesheet_0: -268281913
+      Slingles Move Right Spritesheet_4: 872072575
+      Slingles Move Right Spritesheet_3: 1142151461
+      Slingles Move Right Spritesheet_5: -385899932
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

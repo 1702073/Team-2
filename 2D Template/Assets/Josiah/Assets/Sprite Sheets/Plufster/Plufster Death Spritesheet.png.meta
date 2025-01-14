@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 020ace9592df2894a8828b01b41cfd25
+guid: 76a170739a8417b4c9ac3f001a974700
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 24
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_0
+      name: Plufster Death Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c1fc226cb8dce41a89b4ac2306c42a
-      internalID: 682070696
+      spriteID: eca0b8c73f542ff4d9b28dad1ce0e827
+      internalID: -80517907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_1
+      name: Plufster Death Spritesheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da22334c21e6fa2439ee897f389a8597
-      internalID: -716000865
+      spriteID: 8b1fa259c9cf29a42b99aa7539ac1693
+      internalID: 2142300701
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_2
+      name: Plufster Death Spritesheet_2
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee6df621e594c34d8d6cbc5a59cabb0
-      internalID: -1203743181
+      spriteID: 951482f1bebec7140bb895a1e85d7c7e
+      internalID: -345494816
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_3
+      name: Plufster Death Spritesheet_3
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3f8fb2227faef74ab531e8809e19f1b
-      internalID: -1212536473
+      spriteID: 4f527a575967c5f43b868e3f65c58af3
+      internalID: 308654048
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_4
+      name: Plufster Death Spritesheet_4
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c99b36c5c3df567418abe90c4cf3b9f5
-      internalID: 1334007449
+      spriteID: fcf280f3578abe34a9eda048f276b7fc
+      internalID: 1034702907
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_5
+      name: Plufster Death Spritesheet_5
       rect:
         serializedVersion: 2
         x: 128
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bddd6d4d0852224ebaf65919d0935a9
-      internalID: 44059340
+      spriteID: dfe5409bf6647434ea8560645055c212
+      internalID: 508447445
       vertices: []
       indices: 
       edges: []
@@ -267,12 +267,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Krunter Up Attack Spritesheet_2: -1203743181
-      Krunter Up Attack Spritesheet_0: 682070696
-      Krunter Up Attack Spritesheet_1: -716000865
-      Krunter Up Attack Spritesheet_5: 44059340
-      Krunter Up Attack Spritesheet_4: 1334007449
-      Krunter Up Attack Spritesheet_3: -1212536473
+      Plufster Death Spritesheet_5: 508447445
+      Plufster Death Spritesheet_4: 1034702907
+      Plufster Death Spritesheet_1: 2142300701
+      Plufster Death Spritesheet_3: 308654048
+      Plufster Death Spritesheet_0: -80517907
+      Plufster Death Spritesheet_2: -345494816
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Plufster
       objectReference: {fileID: 0}
+    - target: {fileID: 2181031945243872328, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872329, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -75,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 2181031945243872331, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cc947da131b67c441b5fe205ceb73eff, type: 2}
+      objectReference: {fileID: 22100000, guid: c1d8c1075c5b52648bef5e68a10d37f6, type: 2}
     - target: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: cooldown
       value: 10
@@ -88,6 +92,10 @@ PrefabInstance:
       propertyPath: enemyAttackDamage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+      propertyPath: enemyAttackAnimation
+      value: 
+      objectReference: {fileID: 6789648113816874905}
     - target: {fileID: 7443146990187672831, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -99,3 +107,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+--- !u!95 &6789648113816874905 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2181031945243872331, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+  m_PrefabInstance: {fileID: 4646931976622629842}
+  m_PrefabAsset: {fileID: 0}

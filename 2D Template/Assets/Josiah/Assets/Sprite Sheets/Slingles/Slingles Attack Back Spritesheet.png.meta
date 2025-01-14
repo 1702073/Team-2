@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 020ace9592df2894a8828b01b41cfd25
+guid: cdcc7ed3c5937c344b938d78e72a4afc
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,7 +131,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_0
+      name: Slingles Attack Back Spritesheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c1fc226cb8dce41a89b4ac2306c42a
-      internalID: 682070696
+      spriteID: 6dc579c63ad6f83479e071253044bc56
+      internalID: 1643492853
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_1
+      name: Slingles Attack Back Spritesheet_1
       rect:
         serializedVersion: 2
         x: 128
@@ -166,14 +166,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da22334c21e6fa2439ee897f389a8597
-      internalID: -716000865
+      spriteID: cec72c83549e21e46ba7f529a6598d5e
+      internalID: 1813205469
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_2
+      name: Slingles Attack Back Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d00c4920f12760438975144c136d0cd
+      internalID: -28249957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingles Attack Back Spritesheet_3
       rect:
         serializedVersion: 2
         x: 0
@@ -187,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ee6df621e594c34d8d6cbc5a59cabb0
-      internalID: -1203743181
+      spriteID: 1653ab9d630299c40a355b9f0f998a55
+      internalID: 12263107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_3
+      name: Slingles Attack Back Spritesheet_4
       rect:
         serializedVersion: 2
         x: 128
@@ -208,14 +229,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3f8fb2227faef74ab531e8809e19f1b
-      internalID: -1212536473
+      spriteID: e3063fa5c6965ef42b9ef3a6decc0bd3
+      internalID: -1396502691
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_4
+      name: Slingles Attack Back Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190efaf7e9198e94093720f6ddb51623
+      internalID: -1708550058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slingles Attack Back Spritesheet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -229,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c99b36c5c3df567418abe90c4cf3b9f5
-      internalID: 1334007449
+      spriteID: a9bbc113a455bde41a9f568b60649ae0
+      internalID: 1015799491
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Krunter Up Attack Spritesheet_5
+      name: Slingles Attack Back Spritesheet_7
       rect:
         serializedVersion: 2
         x: 128
@@ -250,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6bddd6d4d0852224ebaf65919d0935a9
-      internalID: 44059340
+      spriteID: 1fa27cc41226fbf4abc253289911dfe5
+      internalID: -1579423033
       vertices: []
       indices: 
       edges: []
@@ -267,12 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Krunter Up Attack Spritesheet_2: -1203743181
-      Krunter Up Attack Spritesheet_0: 682070696
-      Krunter Up Attack Spritesheet_1: -716000865
-      Krunter Up Attack Spritesheet_5: 44059340
-      Krunter Up Attack Spritesheet_4: 1334007449
-      Krunter Up Attack Spritesheet_3: -1212536473
+      Slingles Attack Back Spritesheet_3: 12263107
+      Slingles Attack Back Spritesheet_7: -1579423033
+      Slingles Attack Back Spritesheet_0: 1643492853
+      Slingles Attack Back Spritesheet_2: -28249957
+      Slingles Attack Back Spritesheet_6: 1015799491
+      Slingles Attack Back Spritesheet_1: 1813205469
+      Slingles Attack Back Spritesheet_5: -1708550058
+      Slingles Attack Back Spritesheet_4: -1396502691
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
