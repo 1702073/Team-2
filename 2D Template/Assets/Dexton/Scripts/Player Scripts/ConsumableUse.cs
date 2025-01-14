@@ -6,6 +6,7 @@ public class ConsumableUse : MonoBehaviour
     public HealthHeartBar healthHeartBar;
     public Consumable consumableType;
     public Player_Items player_Items;
+    public IsHolding isHolding;
 
     public void Start()
     {
@@ -18,7 +19,7 @@ public class ConsumableUse : MonoBehaviour
         Half_Heart = 0,
         Full_Heart = 1,
         Salt = 2,
-        Jar = 3
+        Bottle = 3
     }
 
     // Start is called before the first frame update
@@ -36,12 +37,13 @@ public class ConsumableUse : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Salt)
         {
-            //Player_Items.isHolding = IsHolding.Salt;
+            isHolding = IsHolding.Salt;
             Destroy(gameObject);
         }
-        else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Jar)
+        else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Bottle)
         {
-
+            isHolding = IsHolding.Bottle;
+            Destroy(gameObject);
         }
     }
 }
