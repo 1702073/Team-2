@@ -28,8 +28,8 @@ public class Player_Movement : MonoBehaviour
             movement.y = Input.GetAxisRaw("Vertical");
             movement.Normalize();
 
-            animator.SetFloat("Horizontal", movement.x);
-            animator.SetFloat("Vertical", movement.y);
+            animator.SetFloat("Horizontal", movement.x * (moveSpeed == runSpeed ? 2 : 1));
+            animator.SetFloat("Vertical", movement.y * (moveSpeed == runSpeed ? 2 : 1));
             animator.SetFloat("Speed", movement.sqrMagnitude);
         }
 
@@ -69,11 +69,6 @@ public class Player_Movement : MonoBehaviour
         {
             canSprint = true;
         }
-
-        if(canSprint == false)
-        {
-
-        }
     }
 
     private IEnumerator RechargeStamina()
@@ -91,6 +86,5 @@ public class Player_Movement : MonoBehaviour
 
             yield return new WaitForSeconds(.01f);
         }
-
     }
 }

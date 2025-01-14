@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3577078793274416857}
   - component: {fileID: 1166191557961480871}
+  - component: {fileID: 8397046138222113279}
   m_Layer: 0
   m_Name: Jar
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1166191557961480871
 MonoBehaviour:
@@ -47,3 +48,19 @@ MonoBehaviour:
   lootSprite: {fileID: 21300000, guid: 51c61dc339e9e304184e5c86f4e03a5c, type: 3}
   lootName: Jar
   dropChance: 75
+--- !u!114 &8397046138222113279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376187699296808977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0170a5344361d734abee49e3e24ccfdd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthHeartBar: {fileID: 0}
+  consumableType: 0
+  player_Items: {fileID: 0}
+  isHolding: 0
