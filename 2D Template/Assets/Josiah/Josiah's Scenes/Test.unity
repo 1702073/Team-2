@@ -546,8 +546,8 @@ MonoBehaviour:
     m_Bits: 64
   animator: {fileID: 1680184811}
   cooldown: 0
-  distance: 6.3
-  radius: 8.19
+  distance: 2
+  radius: 1
   attackReady: 1
 --- !u!114 &1680184807
 MonoBehaviour:

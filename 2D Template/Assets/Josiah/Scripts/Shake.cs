@@ -8,6 +8,9 @@ public class Shake : MonoBehaviour
 
     public void CamShake()
     {
+        int R = Random.Range(0, 3);
+
+        camAnim.SetInteger("Variation", R);
         camAnim.SetTrigger("Shake");
     }
 }

@@ -57,6 +57,7 @@ public class PlayerAttacks : MonoBehaviour
         {
             // Attacks the enemy
             hit.collider.GetComponent<EnemyGeneral>().EnemyTakeDamage(1);
+            hit.rigidbody.AddForce(GetAttackDirection(), ForceMode2D.Impulse);
         }
         attackReady = false;
 
