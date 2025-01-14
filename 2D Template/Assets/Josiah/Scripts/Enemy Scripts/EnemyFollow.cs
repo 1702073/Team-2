@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyFollow : MonoBehaviour
 {
-
     public float speed;
     public float stoppingDistance;
     public Animator enemyAnimator;
@@ -15,8 +14,11 @@ public class EnemyFollow : MonoBehaviour
 
     private EnemyGeneral enemyGeneral;
 
+    private Rigidbody2D rb2D;
+
     private void Start()
     {
+        rb2D = GetComponent<Rigidbody2D>();
         enemyGeneral = GetComponent<EnemyGeneral>();
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
@@ -32,7 +34,7 @@ public class EnemyFollow : MonoBehaviour
             case EnemyGeneral.State.Active:
                 if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
                 {
-                    transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+                    rb2D.velocity = Vector2.Lerp(rb2D.velocity, (target.position - transform.position).normalized * speed, Time.deltaTime);
                 }
 
                 movement = target.position - transform.position;
@@ -43,10 +45,6 @@ public class EnemyFollow : MonoBehaviour
 
                 break;
         }
-
-
-
     }
-
 }
 

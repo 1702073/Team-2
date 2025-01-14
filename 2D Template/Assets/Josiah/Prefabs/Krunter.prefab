@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2181031945243872335}
   - component: {fileID: 2181031945243872328}
   - component: {fileID: 2181031945243872334}
+  - component: {fileID: 4565388334392813041}
   m_Layer: 6
   m_Name: Krunter
   m_TagString: Enemy
@@ -196,6 +197,27 @@ MonoBehaviour:
   - {fileID: 7505007482866955179, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
   - {fileID: 1166191557961480871, guid: 773d219c838837b488da1fd3723b56fe, type: 3}
   - {fileID: 2576865228374738679, guid: 2b7324357a82a4f4b99230d9f133eab5, type: 3}
+--- !u!50 &4565388334392813041
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2181031945243872324}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.5
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &4953032526279444432
 GameObject:
   m_ObjectHideFlags: 0

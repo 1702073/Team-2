@@ -149,4 +149,8 @@ public class EnemyGeneral : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
 
+    //public void KnockBack()
+    //{
+    //    enemyPosition - 
+    //}
 }
