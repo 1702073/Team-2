@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 517364890}
   - component: {fileID: 517364889}
   - component: {fileID: 517364888}
+  - component: {fileID: 517364892}
   m_Layer: 0
   m_Name: Shake Cam
   m_TagString: MainCamera
@@ -303,7 +304,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -364,6 +365,23 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &517364892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517364886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 5aa6113649555f74dae057821002ceac, type: 2}
 --- !u!1 &722291410
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,6 +435,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 239314315540914873, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 517364891}
     - target: {fileID: 2181031945243872324, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_Name
       value: Krunter
@@ -469,6 +491,14 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: b946df2ba723c364da9220eefe9eb53b, type: 2}
+    - target: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+      propertyPath: attackDistance
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+      propertyPath: enemyAttackAnimation
+      value: 
+      objectReference: {fileID: 1255240162}
     - target: {fileID: 7443146990187672831, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -480,6 +510,22 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+--- !u!114 &1255240159 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+  m_PrefabInstance: {fileID: 1255240158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abea4f3a5e7cb3b41ae920a3372bbed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &1255240162 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2181031945243872331, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+  m_PrefabInstance: {fileID: 1255240158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1426533546 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4561348245172760007, guid: 021e34aa8f15f5244b86f9dba517dbea, type: 3}
@@ -813,6 +859,11 @@ MonoBehaviour:
   speed: 999999
   offset: {x: 0, y: 0, z: -1}
   target: {fileID: 1680184815}
+--- !u!95 &1825980758 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3329637109092263547, guid: 54cee27d73e3129498b16b090bead449, type: 3}
+  m_PrefabInstance: {fileID: 3154940652737538279}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2143057833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1071,15 @@ PrefabInstance:
       value: Room 1 Trigger
       objectReference: {fileID: 0}
     - target: {fileID: 286083957568964311, guid: 9581321c092f6bd41a298139a2bbb5d3, type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 286083957568964311, guid: 9581321c092f6bd41a298139a2bbb5d3, type: 3}
       propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 1255240159}
+    - target: {fileID: 286083957568964311, guid: 9581321c092f6bd41a298139a2bbb5d3, type: 3}
+      propertyPath: enemies.Array.data[1]
       value: 
       objectReference: {fileID: 1635426777}
     m_RemovedComponents: []
@@ -1158,7 +1217,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3329637109092263545, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3329637109092263545, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1207,7 +1266,15 @@ PrefabInstance:
     - target: {fileID: 3329637109092263547, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cc947da131b67c441b5fe205ceb73eff, type: 2}
+      objectReference: {fileID: 22100000, guid: c1d8c1075c5b52648bef5e68a10d37f6, type: 2}
+    - target: {fileID: 3329637109092263551, guid: 54cee27d73e3129498b16b090bead449, type: 3}
+      propertyPath: enemyPosition.x
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3329637109092263551, guid: 54cee27d73e3129498b16b090bead449, type: 3}
+      propertyPath: enemyAttackAnimation
+      value: 
+      objectReference: {fileID: 1825980758}
     - target: {fileID: 3684961176310384777, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: cam
       value: 
@@ -1296,7 +1363,7 @@ PrefabInstance:
       objectReference: {fileID: 1426533546}
     - target: {fileID: 5326464867628790469, guid: 802b9d7445f71fa48ae71f568dd602b7, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5326464867628790469, guid: 802b9d7445f71fa48ae71f568dd602b7, type: 3}
       propertyPath: m_LocalPosition.x

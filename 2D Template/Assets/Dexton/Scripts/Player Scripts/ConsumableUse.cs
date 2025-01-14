@@ -36,7 +36,7 @@ public class ConsumableUse : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Salt)
         {
-            Player_Items.isHolding = IsHolding.Salt;
+            //Player_Items.isHolding = IsHolding.Salt;
             Destroy(gameObject);
         }
         else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Jar)

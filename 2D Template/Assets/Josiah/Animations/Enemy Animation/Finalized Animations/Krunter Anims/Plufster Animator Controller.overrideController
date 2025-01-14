@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Plufster Animator Controller
+  m_Controller: {fileID: 9100000, guid: b946df2ba723c364da9220eefe9eb53b, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 49dc0c9a8a1bcd349872fb36ef190edd, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: efef016785fc01e48ac03db8e63a8b77, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5a89bdd5406a33c4bb9310afe446052c, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: c5e421f440b2ca244acbb653fa91430b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b28344e3a88528743a4fc859b37b2e19, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b010a5f0cee1dc64496d52ee215f7bc4, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 4e2a75fe74272e8428188de1d218a8b2, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9f33872a9fcffe64eb9ccd9f8b18b12a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 95718e5351c29dd488752ec2628c9051, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 95718e5351c29dd488752ec2628c9051, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 6376d7ca416aed14e80d35f06aa18049, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 6376d7ca416aed14e80d35f06aa18049, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: dc8185cd874bcc54e8bb36b307a94a87, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: dc8185cd874bcc54e8bb36b307a94a87, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b65f52beb57116b41b8388058a0fd42b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b65f52beb57116b41b8388058a0fd42b, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 07197cfd41faead448253c8e6fe87c28, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 07197cfd41faead448253c8e6fe87c28, type: 2}
