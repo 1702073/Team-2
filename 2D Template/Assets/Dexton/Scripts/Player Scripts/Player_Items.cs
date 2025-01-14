@@ -12,12 +12,14 @@ public class Player_Items : MonoBehaviour
     }
 
     public IsHolding isHolding;
+    private GameObject Bottle;
+    private GameObject Salt;
 
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Salt");
-        GameObject.FindGameObjectWithTag("Bottle");
+        Salt = GameObject.FindGameObjectWithTag("Salt");
+        Bottle = GameObject.FindGameObjectWithTag("Bottle");
     }
 
     // Update is called once per frame
@@ -25,18 +27,18 @@ public class Player_Items : MonoBehaviour
     {
         if (isHolding == IsHolding.Nothing)
         {
-            GameObject.FindGameObjectWithTag("Salt").SetActive(false);
-            GameObject.FindGameObjectWithTag("Bottle").SetActive(false);
+            Salt.SetActive(false);
+            Bottle.SetActive(false);
         }
         else if(isHolding == IsHolding.Salt)
         {
-            GameObject.FindGameObjectWithTag("Salt").SetActive(false); ;
-            GameObject.FindGameObjectWithTag("Bottle").SetActive(false);
+            Salt.SetActive(true); ;
+            Bottle.SetActive(false);
         }
         else if (isHolding == IsHolding.Bottle)
         {
-            GameObject.FindGameObjectWithTag("Salt").SetActive(false); ;
-            GameObject.FindGameObjectWithTag("Bottle").SetActive(false);
+            Salt.SetActive(false); ;
+            Bottle.SetActive(true);
         } 
     }
 }
