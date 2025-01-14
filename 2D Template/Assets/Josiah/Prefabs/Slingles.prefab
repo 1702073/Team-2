@@ -18,7 +18,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6789648113816874902, guid: 486bf8b4ea120c14bb828068ab0135bd, type: 3}
       propertyPath: m_Name
-      value: Plufster
+      value: Slingles
+      objectReference: {fileID: 0}
+    - target: {fileID: 6789648113816874905, guid: 486bf8b4ea120c14bb828068ab0135bd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 7ae7027170e175f4ba79bfef7d16b039, type: 2}
+    - target: {fileID: 6789648113816874906, guid: 486bf8b4ea120c14bb828068ab0135bd, type: 3}
+      propertyPath: speed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6789648113816874907, guid: 486bf8b4ea120c14bb828068ab0135bd, type: 3}
       propertyPath: m_RootOrder

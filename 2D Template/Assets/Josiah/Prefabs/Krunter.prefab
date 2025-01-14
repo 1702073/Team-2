@@ -148,6 +148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abea4f3a5e7cb3b41ae920a3372bbed8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitNoise: {fileID: 0}
+  enemyAttackAnimation: {fileID: 0}
   enemyPrefab: {fileID: 2181031945243872324}
   enemyHealth: 3
   enemyMaxHealth: 3
@@ -174,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cd6af24cd154ee429992ba77417de4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
   stoppingDistance: 0
   enemyAnimator: {fileID: 2181031945243872331}
 --- !u!114 &2181031945243872334
