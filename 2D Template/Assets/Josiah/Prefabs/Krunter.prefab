@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitNoise: {fileID: 0}
   enemyAttackAnimation: {fileID: 2181031945243872331}
+  enemyDeathAnimation: {fileID: 2181031945243872331}
   enemyPrefab: {fileID: 2181031945243872324}
   enemyHealth: 3
   enemyMaxHealth: 3
