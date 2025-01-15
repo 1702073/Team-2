@@ -180,6 +180,8 @@ MonoBehaviour:
   speed: 0.5
   stoppingDistance: 0
   enemyAnimator: {fileID: 2181031945243872331}
+  effectTime: 3
+  isStunned: 0
 --- !u!114 &2181031945243872334
 MonoBehaviour:
   m_ObjectHideFlags: 0

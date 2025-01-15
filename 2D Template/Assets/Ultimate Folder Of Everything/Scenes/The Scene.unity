@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 123198339}
   - component: {fileID: 123198338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ Transform:
   - {fileID: 1383667282}
   - {fileID: 1896511212}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &125659768
 GameObject:
@@ -258,8 +258,81 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &133082303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 133082304}
+  - component: {fileID: 133082306}
+  - component: {fileID: 133082305}
+  m_Layer: 0
+  m_Name: RawImage
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &133082304
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133082303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 304605850}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -472.1186, y: -221.43451}
+  m_SizeDelta: {x: 293.8847, y: 81.6726}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &133082305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133082303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: bba5e14ef00ec114f81f80de3cc4f976, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &133082306
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 133082303}
+  m_CullTransparentMesh: 1
 --- !u!1 &136194966
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +345,7 @@ GameObject:
   - component: {fileID: 136194970}
   - component: {fileID: 136194969}
   - component: {fileID: 136194968}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-collision (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5666,6 +5739,65 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &182304067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955156, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7505007482866955178, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+      propertyPath: m_Name
+      value: Salt
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
 --- !u!1 &195132625
 GameObject:
   m_ObjectHideFlags: 0
@@ -5678,7 +5810,7 @@ GameObject:
   - component: {fileID: 195132629}
   - component: {fileID: 195132628}
   - component: {fileID: 195132627}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-collisionobjects (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6203,15 +6335,47 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304605849}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 215.37845, y: -29.371231, z: -4.9521446}
+  m_LocalPosition: {x: 238, y: -29.371231, z: -4.9521446}
   m_LocalScale: {x: 1.9200001, y: 1.9200001, z: 1.9200001}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1774308875}
   - {fileID: 1603796784}
+  - {fileID: 133082304}
   m_Father: {fileID: 930233155}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &319418238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7505007482866955178, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+  m_PrefabInstance: {fileID: 182304067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &319418239
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 319418238}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03923416, y: -0.013078213}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.92759895, y: 1.1891603}
+  m_EdgeRadius: 0
 --- !u!1001 &438226893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6310,7 +6474,7 @@ GameObject:
   - component: {fileID: 455165025}
   - component: {fileID: 455165024}
   - component: {fileID: 455165023}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-collisionobjects (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6594,7 +6758,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 286083957568964304, guid: 9581321c092f6bd41a298139a2bbb5d3, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 286083957568964304, guid: 9581321c092f6bd41a298139a2bbb5d3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6741,7 +6905,7 @@ GameObject:
   - component: {fileID: 587007749}
   - component: {fileID: 587007751}
   - component: {fileID: 587007750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-nocollisionobjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6958,7 +7122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6671530573737376162, guid: 82a215f00004b854183f70e1fc6421b4, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6671530573737376162, guid: 82a215f00004b854183f70e1fc6421b4, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7051,7 +7215,7 @@ GameObject:
   - component: {fileID: 691994212}
   - component: {fileID: 691994211}
   - component: {fileID: 691994210}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-collisionobjects (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7347,7 +7511,7 @@ GameObject:
   - component: {fileID: 871349900}
   - component: {fileID: 871349899}
   - component: {fileID: 871349898}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-collisionobjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8351,7 +8515,7 @@ RectTransform:
   - {fileID: 1410848883}
   - {fileID: 1886032716}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8393,8 +8557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -406.5, y: -461.6}
-  m_SizeDelta: {x: 68.1992, y: 68.1992}
+  m_AnchoredPosition: {x: -347, y: -461.6}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &938484255
 MonoBehaviour:
@@ -8513,7 +8677,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &988504126
 PrefabInstance:
@@ -8537,7 +8701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6789648113816874907, guid: 486bf8b4ea120c14bb828068ab0135bd, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6789648113816874907, guid: 486bf8b4ea120c14bb828068ab0135bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8731,7 +8895,7 @@ GameObject:
   - component: {fileID: 1349149662}
   - component: {fileID: 1349149664}
   - component: {fileID: 1349149663}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-nocollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21641,7 +21805,7 @@ GameObject:
   - component: {fileID: 1383667282}
   - component: {fileID: 1383667284}
   - component: {fileID: 1383667283}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-nocollisionobjects (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21863,7 +22027,7 @@ GameObject:
   - component: {fileID: 1410848884}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Salt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21877,7 +22041,7 @@ RectTransform:
   m_GameObject: {fileID: 1410848882}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7602, y: 1.7602, z: 1.7602}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 930233155}
@@ -21885,7 +22049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 844.24, y: -411}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410848884
@@ -21908,7 +22072,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 51122ca680fc7074ca12020bf2f7efe4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21968,7 +22132,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1581764719
 PrefabInstance:
@@ -21988,7 +22152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9184996449504170928, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 9184996449504170928, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22230,7 +22394,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1688140956
 GameObject:
@@ -22314,7 +22478,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1736822138
 PrefabInstance:
@@ -22324,6 +22488,26 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1430984903466236825, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: Salt
+      value: 
+      objectReference: {fileID: 5680317481477786335, guid: cbf2f51c30733be4d9a06d7399b1de50, type: 3}
+    - target: {fileID: 1430984903466236825, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: Bottle
+      value: 
+      objectReference: {fileID: 3362870793546138361, guid: f375253b2ff10264b9528dfc3a2dee60, type: 3}
+    - target: {fileID: 1430984903466236825, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: isHolding
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430984903466236825, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: SaltObject
+      value: 
+      objectReference: {fileID: 5680317481477786335, guid: cbf2f51c30733be4d9a06d7399b1de50, type: 3}
+    - target: {fileID: 1430984903466236825, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: BottleObject
+      value: 
+      objectReference: {fileID: 3362870793546138361, guid: f375253b2ff10264b9528dfc3a2dee60, type: 3}
     - target: {fileID: 8538700132624134856, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
       propertyPath: m_Size.x
       value: 1
@@ -22336,9 +22520,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8538700132624134860, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: runSpeed
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538700132624134860, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: moveSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538700132624134860, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: walkSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8538700132624134860, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
+      propertyPath: StaminaBar
+      value: 
+      objectReference: {fileID: 1603796786}
     - target: {fileID: 8538700132624134863, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8538700132624134863, guid: 5b24fa025ddf5af4788536323edcec07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22665,7 +22865,7 @@ GameObject:
   - component: {fileID: 1886032717}
   m_Layer: 0
   m_Name: Image (1)
-  m_TagString: Untagged
+  m_TagString: Bottle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22679,7 +22879,7 @@ RectTransform:
   m_GameObject: {fileID: 1886032715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7952667, y: 1.7952667, z: 1.7952667}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 930233155}
@@ -22687,7 +22887,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 844.24, y: -411}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1886032717
@@ -22710,7 +22910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 08873404ef2449241b6c72a18a38ecba, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -22740,7 +22940,7 @@ GameObject:
   - component: {fileID: 1896511215}
   - component: {fileID: 1896511214}
   - component: {fileID: 1896511213}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Tilemap-collisionobjects (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
