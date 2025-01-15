@@ -65,7 +65,7 @@ public class PlayerAttacks : MonoBehaviour
         Invoke(nameof(ResetAttack), cooldown);
     }
 
-    private Vector2 GetAttackDirection()
+    public Vector2 GetAttackDirection()
     {
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePos - (Vector2)transform.position).normalized * distance;

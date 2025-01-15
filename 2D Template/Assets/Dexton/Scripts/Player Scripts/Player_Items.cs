@@ -16,11 +16,16 @@ public class Player_Items : MonoBehaviour
     private GameObject Bottle;
     private GameObject Salt;
 
+    public GameObject SaltObject;
+    public GameObject BottleObject;
+    private PlayerAttacks attacks;
+
     // Start is called before the first frame update
     void Start()
     {
         Salt = GameObject.FindGameObjectWithTag("Salt");
         Bottle = GameObject.FindGameObjectWithTag("Bottle");
+        attacks = GetComponent<PlayerAttacks>();
     }
 
     // Update is called once per frame
@@ -38,8 +43,7 @@ public class Player_Items : MonoBehaviour
 
             if (Input.GetKeyDown(UseConsumable))
             {
-
-
+                Instantiate(SaltObject, transform.position + (Vector3)attacks.GetAttackDirection(), Quaternion.identity);
                 isHolding = IsHolding.Nothing;
             }
         }

@@ -33,7 +33,7 @@ public class Player_Movement : MonoBehaviour
             animator.SetFloat("Speed", movement.sqrMagnitude);
         }
 
-        rb2d.MovePosition(rb2d.position + movement * moveSpeed * Time.deltaTime);
+        rb2d.velocity = (movement * moveSpeed);
 
         if (Input.GetKey(run) && stamina > 0 && canSprint == true)
         {

@@ -115,9 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthHeartBar: {fileID: 0}
-  consumableType: 0
+  consumableType: 3
   player_Items: {fileID: 0}
-  isHolding: 0
+  isHolding: 2
 --- !u!114 &7976459970162869680
 MonoBehaviour:
   m_ObjectHideFlags: 0

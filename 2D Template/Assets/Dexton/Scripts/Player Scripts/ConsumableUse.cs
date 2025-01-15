@@ -39,11 +39,13 @@ public class ConsumableUse : MonoBehaviour
         {
             isHolding = IsHolding.Salt;
             Destroy(gameObject);
+            player_Items.isHolding = IsHolding.Salt;
         }
         else if (collision.gameObject.CompareTag("Player") && consumableType == Consumable.Bottle)
         {
             isHolding = IsHolding.Bottle;
             Destroy(gameObject);
+            player_Items.isHolding = IsHolding.Bottle;
         }
     }
 }
