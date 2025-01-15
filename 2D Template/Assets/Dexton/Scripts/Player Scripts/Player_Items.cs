@@ -36,7 +36,12 @@ public class Player_Items : MonoBehaviour
             Salt.SetActive(true); ;
             Bottle.SetActive(false);
 
-            if (Input.getKey)
+            if (Input.GetKeyDown(UseConsumable))
+            {
+
+
+                isHolding = IsHolding.Nothing;
+            }
         }
         else if (isHolding == IsHolding.Bottle)
         {
