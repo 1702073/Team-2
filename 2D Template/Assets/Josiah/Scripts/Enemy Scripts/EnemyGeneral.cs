@@ -11,6 +11,7 @@ public class EnemyGeneral : MonoBehaviour
     public AudioClip hitNoise;
 
     public Animator enemyAttackAnimation;
+    public Animator enemyDeathAnimation;
 
     public GameObject enemyPrefab;
 
@@ -134,13 +135,14 @@ public class EnemyGeneral : MonoBehaviour
 
     void Death()
     {
-        // Gets the lootbag randomizer and then creates loot when the enemy dies
-        GetComponent<LootBag>().InstantiateLoot(transform.position);
+        enemyAttackAnimation.SetTrigger("Death");
+        //// Gets the lootbag randomizer and then creates loot when the enemy dies
+        //GetComponent<LootBag>().InstantiateLoot(transform.position);
         // Adds whatever the score value is to the current score
         Score.scoreValue += enemyScore;
         Debug.Log("Enemy defeated");
         // Deletes the enemy
-        Destroy(gameObject);
+        Destroy(gameObject, 0.5f);
     }
 
     private void OnDrawGizmos()
@@ -148,9 +150,4 @@ public class EnemyGeneral : MonoBehaviour
         // This function allows you to see the circle that the enemy casts when it attacks
         Gizmos.DrawWireSphere(transform.position, attackDistance);
     }
-
-    //public void KnockBack()
-    //{
-    //    enemyPosition - 
-    //}
 }

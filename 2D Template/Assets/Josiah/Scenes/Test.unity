@@ -305,11 +305,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872329, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8150916
+      value: -7.64
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872329, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3370595
+      value: 3.11
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872329, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -352,6 +352,10 @@ PrefabInstance:
       value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
+      propertyPath: enemyDeathAnimation
+      value: 
+      objectReference: {fileID: 1255240162}
+    - target: {fileID: 2181031945243872335, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
       propertyPath: enemyAttackAnimation
       value: 
       objectReference: {fileID: 1255240162}
@@ -363,7 +367,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2181031945243872334, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ecd654cd2593c4daa4d90555f2695a, type: 3}
 --- !u!114 &1255240159 stripped
@@ -419,11 +424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9184996449504170928, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.0602636
+      value: -7.65
       objectReference: {fileID: 0}
     - target: {fileID: 9184996449504170928, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8675432
+      value: -3.17
       objectReference: {fileID: 0}
     - target: {fileID: 9184996449504170928, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_LocalPosition.z
@@ -466,6 +471,10 @@ PrefabInstance:
       value: -7
       objectReference: {fileID: 0}
     - target: {fileID: 9184996449504170934, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+      propertyPath: enemyDeathAnimation
+      value: 
+      objectReference: {fileID: 1573006088}
+    - target: {fileID: 9184996449504170934, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: enemyAttackAnimation
       value: 
       objectReference: {fileID: 1573006088}
@@ -473,7 +482,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slingles
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9184996449504170935, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
 --- !u!95 &1573006088 stripped
@@ -1045,11 +1055,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3329637109092263545, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.9303107
+      value: -7.66
       objectReference: {fileID: 0}
     - target: {fileID: 3329637109092263545, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4731991
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3329637109092263545, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1096,6 +1106,10 @@ PrefabInstance:
       value: -3
       objectReference: {fileID: 0}
     - target: {fileID: 3329637109092263551, guid: 54cee27d73e3129498b16b090bead449, type: 3}
+      propertyPath: enemyDeathAnimation
+      value: 
+      objectReference: {fileID: 1825980758}
+    - target: {fileID: 3329637109092263551, guid: 54cee27d73e3129498b16b090bead449, type: 3}
       propertyPath: enemyAttackAnimation
       value: 
       objectReference: {fileID: 1825980758}
@@ -1111,7 +1125,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3329637109092263550, guid: 54cee27d73e3129498b16b090bead449, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 54cee27d73e3129498b16b090bead449, type: 3}
 --- !u!1001 &4561348243913998701

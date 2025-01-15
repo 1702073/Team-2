@@ -60,10 +60,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9184996449504170934, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+      propertyPath: enemyDeathAnimation
+      value: 
+      objectReference: {fileID: 3329637109092263547}
     - target: {fileID: 9184996449504170941, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_Name
-      value: Plufster
+      value: Clobberpult
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+--- !u!95 &3329637109092263547 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9184996449504170930, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+  m_PrefabInstance: {fileID: 5855408304784455113}
+  m_PrefabAsset: {fileID: 0}
