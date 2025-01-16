@@ -49,8 +49,14 @@ public class Player_Items : MonoBehaviour
         }
         else if (isHolding == IsHolding.Bottle)
         {
-            Salt.SetActive(false); ;
+            Salt.SetActive(false);
             Bottle.SetActive(true);
+
+            if (Input.GetKeyDown(UseConsumable))
+            {
+                Instantiate(BottleObject, transform.position + (Vector3)attacks.GetAttackDirection(), Quaternion.identity);
+                isHolding = IsHolding.Nothing;
+            }
         } 
     }
 }

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Bottle_Behavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public LayerMask EnemyLayer;
+    public float radius;
 
     // Update is called once per frame
     void Update()
     {
-        
+        var hits = Physics2D.CircleCastAll(transform.position, radius, Vector2.zero, 0, EnemyLayer);
+        foreach (RaycastHit2D hit in hits)
+        {
+            hit.collider.GetComponent<EnemyFollow>().EnemySlow();
+        }
     }
 }

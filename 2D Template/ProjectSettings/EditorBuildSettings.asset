@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/Ultimate Folder Of Everything/Scenes/Title.unity
     guid: 102f6bf23b4cc334b9bb2d761724166c
   - enabled: 1
-    path: Assets/Ultimate Folder Of Everything/Scenes/Gleepus.unity
-    guid: 24da1c22c4a853a42bcf5bfc4bbf2de2
+    path: Assets/Ultimate Folder Of Everything/Scenes/The Scene.unity
+    guid: 2de1832dba2615046b58f5b19c7545f5
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Credits.unity
+    guid: 8adfa8653b8dac14287d5008d33db943
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Intro Cutscene.unity
+    guid: f34fac17215ba4c498247604e916e9eb
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/End Cutscene.unity
+    guid: 37d68ddab7bf7a44a824307c82080d43
   - enabled: 1
     path: Assets/Ultimate Folder Of Everything/Scenes/You Died.unity
     guid: 9e14ebd0dd1b41b4098740e28c9a569c
-  - enabled: 0
-    path: Assets/Dexton/Scenes/MY Guy why so serious.unity
-    guid: f335c5d3252cb604da84c9732d305e80
   m_configObjects: {}

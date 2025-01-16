@@ -37,6 +37,11 @@ public class EnemyFollow : MonoBehaviour
             effectTime -= Time.deltaTime;
             EnemyFreeze();
         }
+        if (isSlowed == true)
+        {
+            effectTime -= Time.deltaTime;
+            EnemyFreeze();
+        }
 
         switch (enemyGeneral.state)
         {
@@ -67,33 +72,19 @@ public class EnemyFollow : MonoBehaviour
         speed = 0;
         Invoke(nameof(ResetEnemySpeed), 3);
     }
-    public void EnemyStun()
+
+    public void EnemySlow()
     {
         isStunned = true;
 
         speed = baseSpeedStored * 0.5f;
-        Invoke(nameof(ResetEnemySpeed), 3);
+        Invoke(nameof(ResetEnemySpeed), 8);
     }
 
     public void ResetEnemySpeed()
     {
-        Debug.Log("not brrrr");
         isStunned = false;
         speed = baseSpeedStored;
-    }
-
-    public void EnemySlow()
-    {
-        isSlowed = true;
-        if (effectTime > 0)
-        {
-            speed = baseSpeedStored * 0.5f;
-        }
-        if (effectTime <= 0)
-        {
-            isSlowed = false;
-            speed = baseSpeedStored;
-        }
     }
 }
 
