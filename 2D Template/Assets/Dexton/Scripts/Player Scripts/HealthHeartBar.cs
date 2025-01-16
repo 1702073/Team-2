@@ -98,10 +98,10 @@ public class HealthHeartBar : MonoBehaviour
 
     public void TakeDamage(float amount)
     {
-        shake.CamShake();
         playerHealth -= amount;
         OnPlayerDamaged?.Invoke();
         Debug.Log($"Damage taken {amount}");
+        shake.CamShake();
     }
 
     public void HealDamage(float amount)
