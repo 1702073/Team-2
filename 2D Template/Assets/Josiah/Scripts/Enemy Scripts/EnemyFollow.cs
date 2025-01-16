@@ -67,7 +67,7 @@ public class EnemyFollow : MonoBehaviour
         speed = 0;
         Invoke(nameof(ResetEnemySpeed), 3);
     }
-    public void EnemyStun()
+    public void EnemySlow()
     {
         isStunned = true;
 
