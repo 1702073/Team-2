@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     public void Update()
     {
-        if (isInCollider == true && enemiesDestroyed == 1 && Input.GetKeyDown(KeyCode.E))
+        if (isInCollider == true && enemiesDestroyed == 19 && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Game Over");
             //EndGame();
