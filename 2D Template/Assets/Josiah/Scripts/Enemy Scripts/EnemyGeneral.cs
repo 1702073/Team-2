@@ -102,7 +102,7 @@ public class EnemyGeneral : MonoBehaviour
         if (hit&&hit.collider.CompareTag("Player"))
         {
             // Attacks the player
-            hit.collider.GetComponent<HealthHeartBar>().TakeDamage(enemyAttackDamage);
+            FindObjectOfType<HealthHeartBar>().TakeDamage(enemyAttackDamage);
 
             // Plays the attack animation
             enemyAttackAnimation.SetFloat("Horizontal", enemyPosition.x);

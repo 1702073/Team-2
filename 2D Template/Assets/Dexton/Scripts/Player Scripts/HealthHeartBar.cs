@@ -34,16 +34,16 @@ public class HealthHeartBar : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(healthUp))
-        {
-            playerHealth++;
-            OnPlayerHeal?.Invoke();
-        }
-        if (Input.GetKeyDown(healthDown))
-        {
-            playerHealth--;
-            OnPlayerHeal?.Invoke();
-        }
+        //if (Input.GetKeyDown(healthUp))
+        //{
+        //    playerHealth++;
+        //    OnPlayerHeal?.Invoke();
+        //}
+        //if (Input.GetKeyDown(healthDown))
+        //{
+        //    playerHealth--;
+        //    OnPlayerHeal?.Invoke();
+        //}
         if (playerHealth > playerMaxHealth)
         {
             playerHealth = playerMaxHealth;
