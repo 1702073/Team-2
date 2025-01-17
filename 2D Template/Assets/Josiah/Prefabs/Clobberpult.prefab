@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: enemyDeathAnimation
       value: 
       objectReference: {fileID: 3329637109092263547}
+    - target: {fileID: 9184996449504170935, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+      propertyPath: lootList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184996449504170935, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+      propertyPath: lootList.Array.data[3]
+      value: 
+      objectReference: {fileID: 2576865228374738679, guid: 2b7324357a82a4f4b99230d9f133eab5, type: 3}
     - target: {fileID: 9184996449504170941, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: m_Name
       value: Clobberpult

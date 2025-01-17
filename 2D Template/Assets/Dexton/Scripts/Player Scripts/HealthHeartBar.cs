@@ -29,7 +29,7 @@ public class HealthHeartBar : MonoBehaviour
     private void Start()
     {
         DrawHearts ();
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        //shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
 
     private void Update()
@@ -101,7 +101,7 @@ public class HealthHeartBar : MonoBehaviour
         playerHealth -= amount;
         OnPlayerDamaged?.Invoke();
         Debug.Log($"Damage taken {amount}");
-        shake.CamShake();
+        //shake.CamShake();
     }
 
     public void HealDamage(float amount)
