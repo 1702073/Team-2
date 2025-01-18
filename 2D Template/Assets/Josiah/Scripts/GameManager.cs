@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,17 +13,17 @@ public class GameManager : MonoBehaviour
 
     public bool isInCollider;
 
-    //public void EndGame()
-    //{
-
-    //}
+    public void EndGame()
+    {
+        SceneManager.LoadScene("End Cutscene");
+    }
 
     public void Update()
     {
-        if (isInCollider == true && enemiesDestroyed == 19 && Input.GetKeyDown(KeyCode.E))
+        if (isInCollider == true && enemiesDestroyed == 3 && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Game Over");
-            //EndGame();
+            EndGame();
         }
     }
 

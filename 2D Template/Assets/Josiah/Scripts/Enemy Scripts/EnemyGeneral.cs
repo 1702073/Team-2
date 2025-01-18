@@ -41,6 +41,8 @@ public class EnemyGeneral : MonoBehaviour
 
     public int enemyScore;
 
+    public bool isDead = false;
+
     private void OnDestroy()
     {
         // Adds to the hidden number enemiesDestroyed which I use as a condition for the game to end
@@ -76,7 +78,7 @@ public class EnemyGeneral : MonoBehaviour
                     Invoke(nameof(ResetAttack), cooldown);
                 }
 
-                if (enemyHealth <= 0)
+                if (enemyHealth <= 0 && isDead == false)
                 {
                     Death();
                 }
@@ -135,12 +137,13 @@ public class EnemyGeneral : MonoBehaviour
 
     void Death()
     {
+        isDead = true;
         enemyAttackAnimation.SetTrigger("Death");
-        //// Gets the lootbag randomizer and then creates loot when the enemy dies
-        //GetComponent<LootBag>().InstantiateLoot(transform.position);
         // Adds whatever the score value is to the current score
         Score.scoreValue += enemyScore;
         Debug.Log("Enemy defeated");
+        // Gets the lootbag randomizer and then creates loot when the enemy dies
+        GetComponent<LootBag>().InstantiateLoot(transform.position);
         // Deletes the enemy
         Destroy(gameObject, 0.5f);
     }

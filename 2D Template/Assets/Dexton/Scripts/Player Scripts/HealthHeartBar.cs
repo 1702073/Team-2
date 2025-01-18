@@ -51,7 +51,7 @@ public class HealthHeartBar : MonoBehaviour
         if (playerHealth <= 0)
         {
             playerHealth = 0;
-            SceneManager.LoadScene("Title");
+            SceneManager.LoadScene("You Died");
             Debug.Log("You're Dead");
             OnPlayerDeath?.Invoke();
         }

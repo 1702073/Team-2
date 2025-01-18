@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1166191557961480871}
   - component: {fileID: 8397046138222113279}
   - component: {fileID: 7976459970162869680}
+  - component: {fileID: 6812201242434009746}
   m_Layer: 0
   m_Name: Jar
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376187699296808977}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04308628, y: 0.08367839, z: -9.931581}
+  m_LocalPosition: {x: -0.04308628, y: 0.08367839, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 08873404ef2449241b6c72a18a38ecba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -99,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62521e4a85e3d064cae2a4d8a17e38cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lootSprite: {fileID: 21300000, guid: 51c61dc339e9e304184e5c86f4e03a5c, type: 3}
+  lootSprite: {fileID: 21300000, guid: 08873404ef2449241b6c72a18a38ecba, type: 3}
   lootName: Jar
   dropChance: 75
 --- !u!114 &8397046138222113279
@@ -130,3 +131,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 448da6c66ed6b174d84bf54745f0142a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  radius: 0
+--- !u!61 &6812201242434009746
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376187699296808977}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

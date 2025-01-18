@@ -18,7 +18,7 @@ public class LootBag : MonoBehaviour
                 possibleItems.Add(item);
             }
         }
-        if(possibleItems.Count > 0)
+        if (possibleItems.Count > 0)
         {
             Loot droppedItem = possibleItems[Random.Range(0, possibleItems.Count)];
             return droppedItem;
@@ -34,6 +34,7 @@ public class LootBag : MonoBehaviour
         {
             GameObject lootGameObject = Instantiate(droppedItemPrefab, spawnPosition, Quaternion.identity);
             lootGameObject.GetComponent<ItemInstance>().AssignLoot(droppedItem);
+            lootGameObject.GetComponent<SpriteRenderer>().sprite = droppedItem.lootSprite;
 
             //float dropForce = 300f;
             //Vector2 dropDirection = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f));

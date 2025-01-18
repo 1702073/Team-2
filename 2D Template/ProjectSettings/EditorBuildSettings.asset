@@ -23,4 +23,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Ultimate Folder Of Everything/Scenes/You Died.unity
     guid: 9e14ebd0dd1b41b4098740e28c9a569c
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Adam R..unity
+    guid: 4ac1f14018a947f4d8e8c920664a20ee
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Chloe P..unity
+    guid: ae2718fa6c3f0064d81ada377867279f
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Dexton W..unity
+    guid: 3ddd3b59797013d45b77598cc3f350dc
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Josiah K..unity
+    guid: ede82fecdaabeec449a732b360f9ad55
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Onyx H..unity
+    guid: 0c3d051a13ce7b74fa57cbee03c28a90
+  - enabled: 1
+    path: Assets/Ultimate Folder Of Everything/Scenes/Riley A..unity
+    guid: 0dcd8569102b5f241b128f8759d2ee54
   m_configObjects: {}
