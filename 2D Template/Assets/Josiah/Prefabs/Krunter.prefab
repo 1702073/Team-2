@@ -166,6 +166,7 @@ MonoBehaviour:
   attackReady: 1
   attackDistance: 0
   enemyScore: 15
+  isDead: 0
 --- !u!114 &2181031945243872328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -198,10 +199,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   droppedItemPrefab: {fileID: 4995900641122123472, guid: cf4fcc6c7e32290418e962664ca2fe0d, type: 3}
   lootList:
-  - {fileID: 7505007482866955179, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
-  - {fileID: 1166191557961480871, guid: 773d219c838837b488da1fd3723b56fe, type: 3}
-  - {fileID: 2576865228374738679, guid: 2b7324357a82a4f4b99230d9f133eab5, type: 3}
-  - {fileID: 2576865228374738679, guid: 2b7324357a82a4f4b99230d9f133eab5, type: 3}
+  - {fileID: 7505007482866955178, guid: 686e09d14797ab543a17ae80aaa0dcd4, type: 3}
+  - {fileID: 376187699296808977, guid: 773d219c838837b488da1fd3723b56fe, type: 3}
+  - {fileID: 2953367552551462406, guid: 2b7324357a82a4f4b99230d9f133eab5, type: 3}
+  - {fileID: 1975643837905049276, guid: 18d28dfadcc97364bbc8b9f0b8beefd2, type: 3}
 --- !u!50 &4565388334392813041
 Rigidbody2D:
   serializedVersion: 4

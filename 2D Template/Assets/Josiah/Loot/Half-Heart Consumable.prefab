@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0652be726381795458302915f0a9462f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1bdf65fa0be67264ea71963eb1b043db, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -117,6 +117,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthHeartBar: {fileID: 0}
   consumableType: 0
+  player_Items: {fileID: 0}
+  isHolding: 0
 --- !u!114 &2576865228374738679
 MonoBehaviour:
   m_ObjectHideFlags: 0
