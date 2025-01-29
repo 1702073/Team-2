@@ -65,6 +65,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 22100000, guid: c64d67f0422986d418ecc1af4dec9436, type: 2}
     - target: {fileID: 9184996449504170934, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+      propertyPath: enemyHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184996449504170934, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
+      propertyPath: enemyMaxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9184996449504170934, guid: 1f927972534e2cd4486f1bac3281ad04, type: 3}
       propertyPath: enemyDeathAnimation
       value: 
       objectReference: {fileID: 3329637109092263547}

@@ -20,7 +20,7 @@ public class BattleSystem : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (state == State.Idle)
+        if (collision.CompareTag("Player") && state == State.Idle)
         {
             StartBattle();
         }

@@ -153,8 +153,8 @@ MonoBehaviour:
   enemyAttackAnimation: {fileID: 2181031945243872331}
   enemyDeathAnimation: {fileID: 2181031945243872331}
   enemyPrefab: {fileID: 2181031945243872324}
-  enemyHealth: 3
-  enemyMaxHealth: 3
+  enemyHealth: 4
+  enemyMaxHealth: 4
   healthBar: {fileID: 239314315540914873}
   enemyPosition: {x: -5, y: 0}
   state: 0
