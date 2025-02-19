@@ -52,7 +52,7 @@ public class EnemyFollow : MonoBehaviour
             case EnemyGeneral.State.Active:
                 if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
                 {
-                    rb2D.velocity = Vector2.Lerp(rb2D.velocity, (target.position - transform.position).normalized * speed, Time.deltaTime);
+                    rb2D.linearVelocity = Vector2.Lerp(rb2D.linearVelocity, (target.position - transform.position).normalized * speed, Time.deltaTime);
                 }
 
                 movement = target.position - transform.position;

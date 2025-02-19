@@ -10,7 +10,7 @@ public class HealthHeartBar : MonoBehaviour
     public GameObject heartPrefab;
     public KeyCode healthUp, healthDown;
 
-    private Shake shake;
+    public Shake shake;
 
     List<HealthHeart> hearts = new List<HealthHeart>();
 
@@ -101,7 +101,8 @@ public class HealthHeartBar : MonoBehaviour
         playerHealth -= amount;
         OnPlayerDamaged?.Invoke();
         Debug.Log($"Damage taken {amount}");
-        //shake.CamShake();
+        shake.CamShake();
+        //GetComponent()
     }
 
     public void HealDamage(float amount)
